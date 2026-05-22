@@ -1,4 +1,4 @@
-// //even odd
+// //even odd /////////////////////////////////////////////////////
 // const temp = 20;
 // for (let i = 0; i <= temp; i++) {
 //   if (i == 0) {
@@ -10,14 +10,27 @@
 //   }
 // }
 
-// //Leap year check
+// //Leap year check /////////////////////////////////////////////////////
 
-const isLeapYear = (year) => {
-  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-    console.log(year, "Is leap year");
-  } else {
-    console.log(year, "Is not leap year");
+// const isLeapYear = (year) => {
+//   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+//     console.log(year, "Is leap year");
+//   } else {
+//     console.log(year, "Is not leap year");
+//   }
+// };
+
+// isLeapYear(1900);
+
+// Find largest between two numbers
+const findLargestNumber = (params) => {
+  let temp = params[0];
+  for (let i = 0; i < params.length; i++) {
+    if (temp < params[i]) {
+      temp = params[i];
+    }
   }
+  return temp;
 };
 
-isLeapYear(1900);
+console.log(findLargestNumber([4, 2, 5, 2, 4, 8, 1, 9, 23, 64, 1]));
