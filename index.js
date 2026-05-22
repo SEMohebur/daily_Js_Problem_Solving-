@@ -35,17 +35,38 @@
 
 // console.log(findLargestNumber([4, 2, 5, 2, 4, 8, 1, 9, 23, 64, 1]));
 
-const checkNumber = (number) => {
-  if (number > 0) {
-    return "Positive Number";
-  } else if (number < 0) {
-    return "Negative Number";
-  } else {
-    return "Zero";
+// const checkNumber = (number) => {
+//   if (number > 0) {
+//     return "Positive Number";
+//   } else if (number < 0) {
+//     return "Negative Number";
+//   } else {
+//     return "Zero";
+//   }
+// };
+
+// console.log(checkNumber(10));
+
+//find a longest string
+const findLongestStr = (arr) => {
+  let temp = "";
+
+  for (let val of arr) {
+    // trim diye age porer white spache delete kortechi
+    let curentVal = val.trim();
+    if (curentVal.length > temp.length) {
+      temp = curentVal;
+    }
   }
+  return temp;
 };
 
-console.log(checkNumber(10));
-
-// github blue badge issue
-console.log("test ");
+console.log(
+  findLongestStr([
+    "          sdsdsds      ",
+    "mahir",
+    "   mmmmm ",
+    "caw",
+    " mudassir",
+  ]),
+);
