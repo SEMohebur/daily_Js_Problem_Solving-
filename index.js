@@ -34,3 +34,6 @@ const findLargestNumber = (params) => {
 };
 
 console.log(findLargestNumber([4, 2, 5, 2, 4, 8, 1, 9, 23, 64, 1]));
+
+// new problem find out
+console.log("Day 2 problem solving");
