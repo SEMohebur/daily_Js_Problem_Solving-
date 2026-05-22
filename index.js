@@ -46,3 +46,6 @@ const checkNumber = (number) => {
 };
 
 console.log(checkNumber(10));
+
+// github blue badge issue
+console.log("test ");
