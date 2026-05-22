@@ -23,17 +23,26 @@
 // isLeapYear(1900);
 
 // Find largest between two numbers
-const findLargestNumber = (params) => {
-  let temp = params[0];
-  for (let i = 0; i < params.length; i++) {
-    if (temp < params[i]) {
-      temp = params[i];
-    }
+// const findLargestNumber = (params) => {
+//   let temp = params[0];
+//   for (let i = 0; i < params.length; i++) {
+//     if (temp < params[i]) {
+//       temp = params[i];
+//     }
+//   }
+//   return temp;
+// };
+
+// console.log(findLargestNumber([4, 2, 5, 2, 4, 8, 1, 9, 23, 64, 1]));
+
+const checkNumber = (number) => {
+  if (number > 0) {
+    return "Positive Number";
+  } else if (number < 0) {
+    return "Negative Number";
+  } else {
+    return "Zero";
   }
-  return temp;
 };
 
-console.log(findLargestNumber([4, 2, 5, 2, 4, 8, 1, 9, 23, 64, 1]));
-
-// new problem find out
-console.log("Day 2 problem solving");
+console.log(checkNumber(10));
