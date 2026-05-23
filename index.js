@@ -72,12 +72,34 @@
 // );
 
 // Check voting eligibility (18+)
-const votingCondition = (age) => {
-  if (age < 18) {
-    return "You are not eligible to vote.";
-  } else {
-    return "You are eligible to vote.";
+// const votingCondition = (age) => {
+//   if (age < 18) {
+//     return "You are not eligible to vote.";
+//   } else {
+//     return "You are eligible to vote.";
+//   }
+// };
+
+// console.log(votingCondition(24));
+
+//Check if character is vowel or consonant
+
+const vowelCheck = (str) => {
+  const vowels = ["a", "e", "i", "o", "u"];
+
+  let vowel = 0;
+  let consonant = 0;
+
+  const strArr = str.toLowerCase().split("");
+
+  for (let item of strArr) {
+    if (vowels.includes(item)) {
+      vowel++;
+    } else if (item >= "a" && item <= "z") {
+      consonant++;
+    }
   }
+  return { vowel, consonant };
 };
 
-console.log(votingCondition(24));
+console.log(vowelCheck("Omit  lll77777 232232aooooollllll hassan RIpon"));
