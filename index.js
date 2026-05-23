@@ -48,25 +48,36 @@
 // console.log(checkNumber(10));
 
 //find a longest string
-const findLongestStr = (arr) => {
-  let temp = "";
+// const findLongestStr = (arr) => {
+//   let temp = "";
 
-  for (let val of arr) {
-    // trim diye age porer white spache delete kortechi
-    let curentVal = val.trim();
-    if (curentVal.length > temp.length) {
-      temp = curentVal;
-    }
+//   for (let val of arr) {
+//     // trim diye age porer white spache delete kortechi
+//     let curentVal = val.trim();
+//     if (curentVal.length > temp.length) {
+//       temp = curentVal;
+//     }
+//   }
+//   return temp;
+// };
+
+// console.log(
+//   findLongestStr([
+//     "          sdsdsds      ",
+//     "mahir",
+//     "   mmmmm ",
+//     "caw",
+//     " mudassir",
+//   ]),
+// );
+
+// Check voting eligibility (18+)
+const votingCondition = (age) => {
+  if (age < 18) {
+    return "You are not eligible to vote.";
+  } else {
+    return "You are eligible to vote.";
   }
-  return temp;
 };
 
-console.log(
-  findLongestStr([
-    "          sdsdsds      ",
-    "mahir",
-    "   mmmmm ",
-    "caw",
-    " mudassir",
-  ]),
-);
+console.log(votingCondition(24));
