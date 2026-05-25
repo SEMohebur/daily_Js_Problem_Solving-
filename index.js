@@ -106,16 +106,28 @@
 // // console.log(vowelCheck("Omit  lll77777 232232aooooollllll hassan RIpon"));
 
 // reverse string ////////////////////////////////
+// const reverseStr = (params) => {
+//   const strArr = [];
+//   const str = params.split("");
+//   str.forEach((element) => {
+//     strArr.unshift(element);
+//   });
+//   const finalStr = strArr.join("");
 
-const reverseStr = (params) => {
-  const strArr = [];
-  const str = params.split("");
-  str.forEach((element) => {
-    strArr.unshift(element);
-  });
-  const finalStr = strArr.join("");
+//   return finalStr;
+// };
 
-  return finalStr;
+// // console.log(reverseStr("mohebur"));
+
+// array star border added
+const stringStarBorder = (strArr) => {
+  let wall = "*".repeat(strArr[0].length + 2);
+  strArr.unshift(wall);
+  strArr.push(wall);
+
+  for (let i = 1; i < strArr.length - 1; i++) {
+    strArr[i] = "*".concat(strArr[i], "*");
+  }
+  return strArr;
 };
-
-console.log(reverseStr("mohebur"));
+console.log(stringStarBorder(["moh", "cho", "law", "mew"]));
