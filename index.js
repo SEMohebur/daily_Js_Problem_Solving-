@@ -120,14 +120,33 @@
 // // console.log(reverseStr("mohebur"));
 
 // array star border added
-const stringStarBorder = (strArr) => {
-  let wall = "*".repeat(strArr[0].length + 2);
-  strArr.unshift(wall);
-  strArr.push(wall);
+// const stringStarBorder = (strArr) => {
+//   let wall = "*".repeat(strArr[0].length + 2);
+//   strArr.unshift(wall);
+//   strArr.push(wall);
 
-  for (let i = 1; i < strArr.length - 1; i++) {
-    strArr[i] = "*".concat(strArr[i], "*");
+//   for (let i = 1; i < strArr.length - 1; i++) {
+//     strArr[i] = "*".concat(strArr[i], "*");
+//   }
+//   return strArr;
+// };
+// //console.log(stringStarBorder(["moh", "cho", "law", "mew"]));
+
+// // prime numbers sum
+
+const sumOfPrimeNumbers = (num) => {
+  let totalPrime = 0;
+  for (let i = 2; i < num; i++) {
+    for (let j = 2; j < num; j++) {
+      if (i === j) {
+        totalPrime += i;
+      }
+      if (i % j === 0) {
+        break;
+      }
+    }
   }
-  return strArr;
+  return totalPrime;
 };
-console.log(stringStarBorder(["moh", "cho", "law", "mew"]));
+
+console.log(sumOfPrimeNumbers(7600));
