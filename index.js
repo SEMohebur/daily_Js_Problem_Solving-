@@ -151,6 +151,7 @@
 
 // sumOfPrimeNumbers(7600)
 
+// // find dublicate number
 const nums = [1, 2, 3, 4, 2, 5, 6, 1, 7, 3, 7];
 
 const findDublicateNumber = (params) => {
