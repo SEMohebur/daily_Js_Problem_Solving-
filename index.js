@@ -134,19 +134,35 @@
 
 // // prime numbers sum
 
-const sumOfPrimeNumbers = (num) => {
-  let totalPrime = 0;
-  for (let i = 2; i < num; i++) {
-    for (let j = 2; j < num; j++) {
-      if (i === j) {
-        totalPrime += i;
-      }
-      if (i % j === 0) {
-        break;
+// const sumOfPrimeNumbers = (num) => {
+//   let totalPrime = 0;
+//   for (let i = 2; i < num; i++) {
+//     for (let j = 2; j < num; j++) {
+//       if (i === j) {
+//         totalPrime += i;
+//       }
+//       if (i % j === 0) {
+//         break;
+//       }
+//     }
+//   }
+//   return totalPrime;
+// };
+
+// sumOfPrimeNumbers(7600)
+
+const nums = [1, 2, 3, 4, 2, 5, 6, 1, 7, 3, 7];
+
+const findDublicateNumber = (params) => {
+  const arr = [];
+  for (let i = 0; i < params.length; i++) {
+    for (let j = i + 1; j < params.length; j++) {
+      if (params[i] === params[j] && !arr.includes(params[i])) {
+        arr.push(params[i]);
       }
     }
   }
-  return totalPrime;
+  return arr;
 };
 
-console.log(sumOfPrimeNumbers(7600));
+console.log(findDublicateNumber(nums));
