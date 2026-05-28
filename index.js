@@ -198,21 +198,36 @@
 // fizBuzz(20);
 
 // //find second largest nummber =============================================
-const nums = [10, 10, 40, 20, 50, 10, 30];
+// const nums = [10, 10, 40, 20, 50, 10, 30];
 
-const findsecondLargestNumber = (params) => {
-  const arr = [...params];
+// const findsecondLargestNumber = (params) => {
+//   const arr = [...params];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//       if (arr[j] < arr[j + 1]) {
+//         let temp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = temp;
+//       }
+//     }
+//   }
+//   return arr[1];
+// };
+
+// console.log(findsecondLargestNumber(nums));
+
+// //Average of Array =============================================
+
+const nums = [5, 3, 2, 3];
+
+const averageOfArray = (arr) => {
+  let total = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[j] < arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-      }
-    }
+    total += arr[i];
   }
-  return arr[1];
+  console.log(total);
 };
 
-console.log(findsecondLargestNumber(nums));
+averageOfArray(nums);
