@@ -181,18 +181,30 @@
 // };
 // findSingleValue(nums)
 
-const fizBuzz = (temp) => {
-  for (let i = 1; i <= temp; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      console.log(i, "FizzBuzz");
-    } else if (i % 3 === 0) {
-      console.log(i, "Fizz");
-    } else if (i % 5 === 0) {
-      console.log(i, "Buzz");
-    } else {
-      console.log(i);
-    }
-  }
+// //find fizz buzz number ====================================================
+// const fizBuzz = (temp) => {
+//   for (let i = 1; i <= temp; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log(i, "FizzBuzz");
+//     } else if (i % 3 === 0) {
+//       console.log(i, "Fizz");
+//     } else if (i % 5 === 0) {
+//       console.log(i, "Buzz");
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// };
+
+// fizBuzz(20);
+
+// //find second largest nummber =============================================
+
+const nums = [10, 40, 20, 50, 30];
+
+const findsecondLargestNumber = (params) => {
+  const sortedNumbers = params.sort((a, b) => b - a);
+  return sortedNumbers[1];
 };
 
-fizBuzz(20);
+console.log(findsecondLargestNumber(nums));
