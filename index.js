@@ -119,7 +119,7 @@
 
 // // console.log(reverseStr("mohebur"));
 
-// array star border added
+// array star border added ///////////////////////////////////////////
 // const stringStarBorder = (strArr) => {
 //   let wall = "*".repeat(strArr[0].length + 2);
 //   strArr.unshift(wall);
@@ -132,7 +132,7 @@
 // };
 // //console.log(stringStarBorder(["moh", "cho", "law", "mew"]));
 
-// // prime numbers sum
+// // prime numbers sum ====================================================
 
 // const sumOfPrimeNumbers = (num) => {
 //   let totalPrime = 0;
@@ -151,7 +151,7 @@
 
 // sumOfPrimeNumbers(7600)
 
-// // // find dublicate number
+// // // find dublicate number =========================================================
 // const nums = [1, 2, 3, 4, 2, 5, 6, 1, 7, 3, 7];
 
 // const findDublicateNumber = (params) => {
@@ -166,17 +166,17 @@
 //   return arr;
 // };
 
-// //find uniq value
-const nums = [1, 2, 5, 1, 1, 1, 1, 3, 4, 2, 5, 6, 1, 7, 3, 9, 9];
-const arr = [];
-const findSingleValue = (params) => {
-  for (let i = 0; i < params.length; i++) {
-    for (let j = i + 1; j < params.length; j++) {
-      if (params[i] !== params[j] && !arr.includes(params[j])) {
-        arr.push(params[j]);
-      }
-    }
-  }
-  return arr;
-};
-console.log(findSingleValue(nums));
+// // //find uniq value ===================================================================
+// const nums = [1, 2, 5, 1, 1, 1, 1, 3, 4, 2, 5, 6, 1, 7, 3, 9, 9];
+// const arr = [];
+// const findSingleValue = (params) => {
+//   for (let i = 0; i < params.length; i++) {
+//     for (let j = i + 1; j < params.length; j++) {
+//       if (params[i] !== params[j] && !arr.includes(params[j])) {
+//         arr.push(params[j]);
+//       }
+//     }
+//   }
+//   return arr;
+// };
+// findSingleValue(nums)
