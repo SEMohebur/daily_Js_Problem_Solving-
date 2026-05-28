@@ -1,4 +1,4 @@
-// //even odd /////////////////////////////////////////////////////
+// //even odd ====================================================
 // const temp = 20;
 // for (let i = 0; i <= temp; i++) {
 //   if (i == 0) {
@@ -10,8 +10,7 @@
 //   }
 // }
 
-// //Leap year check /////////////////////////////////////////////////////
-
+// //Leap year check ====================================================
 // const isLeapYear = (year) => {
 //   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
 //     // console.log(year, "Is leap year");
@@ -22,7 +21,7 @@
 
 // isLeapYear(1900);
 
-// //Find largest between two numbers/////////////////////////////////////////////////////
+// //Find largest numbers ====================================================
 // const findLargestNumber = (params) => {
 //   let temp = params[0];
 //   for (let i = 0; i < params.length; i++) {
@@ -35,7 +34,7 @@
 
 // // console.log(findLargestNumber([4, 2, 5, 2, 4, 8, 1, 9, 23, 64, 1]));
 
-// ///////////////////////////////////////////////////
+// =========================================================================
 // const checkNumber = (number) => {
 //   if (number > 0) {
 //     return "Positive Number";
@@ -48,7 +47,7 @@
 
 // // console.log(checkNumber(10));
 
-// //find a longest string  /////////////////////////////////////////////////////
+// //find a longest string  ====================================================
 // const findLongestStr = (arr) => {
 //   let temp = "";
 
@@ -72,7 +71,7 @@
 // //   ]),
 // // );
 
-// //Check voting eligibility (18+)/////////////////////////////////////////////////////
+// //Check voting eligibility (18+)====================================================
 // const votingCondition = (age) => {
 //   if (age < 18) {
 //     return "You are not eligible to vote.";
@@ -83,7 +82,7 @@
 
 // // console.log(votingCondition(24));
 
-// //Check if character is vowel or consonant /////////////////////////////////////////////////////
+// //Check if character is vowel or consonant ====================================================
 
 // const vowelCheck = (str) => {
 //   const vowels = ["a", "e", "i", "o", "u"];
@@ -105,7 +104,7 @@
 
 // // console.log(vowelCheck("Omit  lll77777 232232aooooollllll hassan RIpon"));
 
-// reverse string ////////////////////////////////
+// reverse string====================================================
 // const reverseStr = (params) => {
 //   const strArr = [];
 //   const str = params.split("");
@@ -119,7 +118,7 @@
 
 // // console.log(reverseStr("mohebur"));
 
-// array star border added ///////////////////////////////////////////
+// array star border added  ====================================================
 // const stringStarBorder = (strArr) => {
 //   let wall = "*".repeat(strArr[0].length + 2);
 //   strArr.unshift(wall);
@@ -199,12 +198,21 @@
 // fizBuzz(20);
 
 // //find second largest nummber =============================================
-
-const nums = [10, 40, 20, 50, 30];
+const nums = [10, 10, 40, 20, 50, 10, 30];
 
 const findsecondLargestNumber = (params) => {
-  const sortedNumbers = params.sort((a, b) => b - a);
-  return sortedNumbers[1];
+  const arr = [...params];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] < arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr[1];
 };
 
 console.log(findsecondLargestNumber(nums));
