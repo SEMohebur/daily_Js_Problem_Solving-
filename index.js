@@ -219,15 +219,32 @@
 
 // //Average of Array =============================================
 
-const nums = [5, 3, 2, 3];
+// const nums = [5, 3, 2, 3];
 
-const averageOfArray = (arr) => {
-  let total = 0;
+// const averageOfArray = (arr) => {
+//   let total = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    total += arr[i];
+//   for (let i = 0; i < arr.length; i++) {
+//     total += arr[i];
+//   }
+//   return total
+// };
+
+// averageOfArray(nums);
+
+// // string palindrome =================================================
+const stringPalindrom = (param) => {
+  const store = [];
+  const strArr = param.split("");
+  for (let i = 0; i < strArr.length; i++) {
+    store.unshift(strArr[i]);
   }
-  console.log(total);
+  const result = store.join("");
+  if (param === result) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-averageOfArray(nums);
+console.log(stringPalindrom("lol"));
