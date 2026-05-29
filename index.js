@@ -235,16 +235,18 @@
 // // string palindrome =================================================
 const stringPalindrom = (param) => {
   const store = [];
-  const strArr = param.split("");
+  const strArr = param.replace(/\s/g, "").toLowerCase().split("");
+
   for (let i = 0; i < strArr.length; i++) {
     store.unshift(strArr[i]);
   }
   const result = store.join("");
-  if (param === result) {
+
+  if (strArr.join("") === result) {
     return true;
   } else {
     return false;
   }
 };
 
-console.log(stringPalindrom("lol"));
+console.log(stringPalindrom("lo L"));
