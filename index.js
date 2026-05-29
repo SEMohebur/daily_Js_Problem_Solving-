@@ -233,20 +233,38 @@
 // averageOfArray(nums);
 
 // // string palindrome =================================================
-const stringPalindrom = (param) => {
-  const store = [];
-  const strArr = param.replace(/\s/g, "").toLowerCase().split("");
+// const stringPalindrom = (param) => {
+//   const store = [];
+//   const strArr = param.replace(/\s/g, "").toLowerCase().split("");
 
-  for (let i = 0; i < strArr.length; i++) {
-    store.unshift(strArr[i]);
+//   for (let i = 0; i < strArr.length; i++) {
+//     store.unshift(strArr[i]);
+//   }
+//   const result = store.join("");
+
+//   if (strArr.join("") === result) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// console.log(stringPalindrom("lo L"));
+
+// // Move All Zeroes [1,3,12,0,0]=====================================
+
+function moveAllZerro(param) {
+  const numArr = [];
+  const ZeroArr = [];
+
+  for (let i = 0; i < param.length; i++) {
+    if (param[i] == 0) {
+      ZeroArr.push(param[i]);
+    } else {
+      numArr.push(param[i]);
+    }
   }
-  const result = store.join("");
+  return numArr.concat(ZeroArr);
+}
 
-  if (strArr.join("") === result) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-console.log(stringPalindrom("lo L"));
+console.log(moveAllZerro([0, 1, 0, 8, 0, 6, 0, 3, 12]));
