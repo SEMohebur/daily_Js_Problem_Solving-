@@ -253,18 +253,41 @@
 
 // // Move All Zeroes [1,3,12,0,0]=====================================
 
-function moveAllZerro(param) {
-  const numArr = [];
-  const ZeroArr = [];
+// function moveAllZerro(param) {
+//   const numArr = [];
+//   const ZeroArr = [];
+
+//   for (let i = 0; i < param.length; i++) {
+//     if (param[i] == 0) {
+//       ZeroArr.push(param[i]);
+//     } else {
+//       numArr.push(param[i]);
+//     }
+//   }
+//   return numArr.concat(ZeroArr);
+// }
+
+// console.log(moveAllZerro([0, 1, 0, 8, 0, 6, 0, 3, 12]));
+
+// // array of object findout highest salary employee ================================
+
+const staffs = [
+  { name: "Rahim", salary: 895000 },
+  { name: "Karim", salary: 4999990000 },
+  { name: "Hasan", salary: 3000000000 },
+];
+
+const findHighestSelery = (param) => {
+  let staffSalery = 0;
+  let staffIndex = 0;
 
   for (let i = 0; i < param.length; i++) {
-    if (param[i] == 0) {
-      ZeroArr.push(param[i]);
-    } else {
-      numArr.push(param[i]);
+    if (staffSalery < param[i].salary) {
+      staffSalery = param[i].salary;
+      staffIndex = i;
     }
   }
-  return numArr.concat(ZeroArr);
-}
+  return param[staffIndex];
+};
 
-console.log(moveAllZerro([0, 1, 0, 8, 0, 6, 0, 3, 12]));
+console.log(findHighestSelery(staffs));
