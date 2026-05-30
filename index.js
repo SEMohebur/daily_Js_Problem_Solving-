@@ -271,23 +271,35 @@
 
 // // array of object findout highest salary employee ================================
 
-const staffs = [
-  { name: "Rahim", salary: 895000 },
-  { name: "Karim", salary: 4999990000 },
-  { name: "Hasan", salary: 3000000000 },
-];
+// const staffs = [
+//   { name: "Rahim", salary: 895000 },
+//   { name: "Karim", salary: 4999990000 },
+//   { name: "Hasan", salary: 3000000000 },
+// ];
 
-const findHighestSelery = (param) => {
-  let staffSalery = 0;
-  let staffIndex = 0;
+// const findHighestSelery = (param) => {
+//   let staffSalery = 0;
+//   let staffIndex = 0;
 
-  for (let i = 0; i < param.length; i++) {
-    if (staffSalery < param[i].salary) {
-      staffSalery = param[i].salary;
-      staffIndex = i;
+//   for (let i = 0; i < param.length; i++) {
+//     if (staffSalery < param[i].salary) {
+//       staffSalery = param[i].salary;
+//       staffIndex = i;
+//     }
+//   }
+//   return param[staffIndex];
+// };
+
+// console.log(findHighestSelery(staffs));
+
+// // replace index value========================================================
+const replaceValue = (arr, replace) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+      arr[i] = replace;
     }
   }
-  return param[staffIndex];
+  return arr;
 };
 
-console.log(findHighestSelery(staffs));
+console.log(replaceValue([2, 3, 1, 9, 0, 7, 0], 10));
