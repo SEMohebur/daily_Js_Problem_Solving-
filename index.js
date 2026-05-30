@@ -293,13 +293,43 @@
 // console.log(findHighestSelery(staffs));
 
 // // replace index value========================================================
-const replaceValue = (arr, replace) => {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 0) {
-      arr[i] = replace;
+// const replaceValue = (arr, replace) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 0) {
+//       arr[i] = replace;
+//     }
+//   }
+//   return arr;
+// };
+
+// console.log(replaceValue([2, 3, 1, 9, 0, 7, 0], 10));
+
+const studentInfo = [
+  { subJectName: "Bangla", marks: 98 },
+  { subJectName: "English", marks: 88 },
+  { subJectName: "Ict", marks: 86 },
+  { subJectName: "Math", marks: 76 },
+  { subJectName: "Practical", marks: 20 },
+  { subJectName: "Geography ", marks: 67 },
+];
+
+const resultCheck = (studentInfo) => {
+  let totalResult = 0;
+  const faildSub = [];
+
+  studentInfo.forEach((element) => {
+    totalResult += element.marks;
+
+    if (element.marks < 33) {
+      faildSub.push(element);
     }
+  });
+
+  if (faildSub.length === 0) {
+    return `Congratulation tumi All Subject pass korecho, tomar Total Marks: ${totalResult}`;
+  } else {
+    return `Sorry tumi ${faildSub.length} subject faild korecho, tomar total marks ${totalResult}`;
   }
-  return arr;
 };
 
-console.log(replaceValue([2, 3, 1, 9, 0, 7, 0], 10));
+console.log(resultCheck(studentInfo));
