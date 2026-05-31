@@ -356,19 +356,35 @@
 
 // console.log(objKeyValueSwap(obj));
 
-// prottekta string er first character Capital latter hote hobe 22=====================================================
-const peragraph = "my name is mohebur, i am a mearn stack web developer";
+// // prottekta string er first character Capital latter hote hobe 22=====================================================
+// const peragraph = "my name is mohebur, i am a mearn stack web developer";
 
-const evreyWordFirstCap = (p) => {
-  const convertWordArr = [];
-  const stringArr = p.split(" ");
-  for (let i = 0; i < stringArr.length; i++) {
-    let firstChar = stringArr[i][0].toUpperCase();
-    let sliceWord = stringArr[i].slice(1);
+// const evreyWordFirstCap = (p) => {
+//   const convertWordArr = [];
+//   const stringArr = p.split(" ");
+//   for (let i = 0; i < stringArr.length; i++) {
+//     let firstChar = stringArr[i][0].toUpperCase();
+//     let sliceWord = stringArr[i].slice(1);
 
-    convertWordArr.push(firstChar + sliceWord);
-  }
-  return convertWordArr.join(" ");
+//     convertWordArr.push(firstChar + sliceWord);
+//   }
+//   return convertWordArr.join(" ");
+// };
+
+// console.log(evreyWordFirstCap(peragraph));
+
+// //Array intersection 23================================================
+const arr1 = [2, 5, 8, 2, 2, 2, 21, 3, 26, 22, 23, 1, 3, 5];
+const arr2 = [3, 2, 8, 2, 2, 2, 0, 12, 33];
+
+const arrInterSection = (arr1, arr2) => {
+  const result = [];
+  arr1.forEach((element) => {
+    if (arr2.includes(element) && !result.includes(element)) {
+      result.push(element);
+    }
+  });
+  return result;
 };
 
-console.log(evreyWordFirstCap(peragraph));
+console.log(arrInterSection(arr1, arr2));
