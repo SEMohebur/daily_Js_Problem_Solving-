@@ -338,20 +338,37 @@
 // // object key valye swapign 21=====================================================
 
 // '' remove korte parlei ok hobe ekhn ei kaj tai baki ache
-const obj = {
-  a: 1,
-  b: 2,
-  c: 3,
-};
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   c: 3,
+// };
 
-const objKeyValueSwap = (obj) => {
-  const newObj = {};
-  for (key in obj) {
-    let temp = key;
-    key = obj[key];
-    newObj[key] = temp;
+// const objKeyValueSwap = (obj) => {
+//   const newObj = {};
+//   for (key in obj) {
+//     let temp = key;
+//     key = obj[key];
+//     newObj[key] = temp;
+//   }
+//   return newObj;
+// };
+
+// console.log(objKeyValueSwap(obj));
+
+// prottekta string er first character Capital latter hote hobe 22=====================================================
+const peragraph = "my name is mohebur, i am a mearn stack web developer";
+
+const evreyWordFirstCap = (p) => {
+  const convertWordArr = [];
+  const stringArr = p.split(" ");
+  for (let i = 0; i < stringArr.length; i++) {
+    let firstChar = stringArr[i][0].toUpperCase();
+    let sliceWord = stringArr[i].slice(1);
+
+    convertWordArr.push(firstChar + sliceWord);
   }
-  return newObj;
+  return convertWordArr.join(" ");
 };
 
-console.log(objKeyValueSwap(obj));
+console.log(evreyWordFirstCap(peragraph));
