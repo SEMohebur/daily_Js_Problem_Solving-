@@ -373,18 +373,32 @@
 
 // console.log(evreyWordFirstCap(peragraph));
 
-// //Array intersection 23================================================
-const arr1 = [2, 5, 8, 2, 2, 2, 21, 3, 26, 22, 23, 1, 3, 5];
-const arr2 = [3, 2, 8, 2, 2, 2, 0, 12, 33];
+// // //Array intersection 23================================================
+// const arr1 = [2, 5, 8, 2, 2, 2, 21, 3, 26, 22, 23, 1, 3, 5];
+// const arr2 = [3, 2, 8, 2, 2, 2, 0, 12, 33];
 
-const arrInterSection = (arr1, arr2) => {
-  const result = [];
-  arr1.forEach((element) => {
-    if (arr2.includes(element) && !result.includes(element)) {
-      result.push(element);
+// const arrInterSection = (arr1, arr2) => {
+//   const result = [];
+//   arr1.forEach((element) => {
+//     if (arr2.includes(element) && !result.includes(element)) {
+//       result.push(element);
+//     }
+//   });
+//   return result;
+// };
+
+// console.log(arrInterSection(arr1, arr2));
+
+// find missing number in array
+
+const arr = [1, 2, 3, 5, 6, 7, 8];
+const findMissingNum = (numbers) => {
+  let missingNum = 0;
+  for (let i = 1; i <= numbers.length; i++) {
+    if (arr[i - 1] !== i) {
+      return (missingNum = i);
     }
-  });
-  return result;
+  }
 };
 
-console.log(arrInterSection(arr1, arr2));
+console.log(findMissingNum(arr));
