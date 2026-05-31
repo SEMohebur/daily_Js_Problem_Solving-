@@ -1,4 +1,4 @@
-// //even odd ====================================================
+// //even odd 1====================================================
 // const temp = 20;
 // for (let i = 0; i <= temp; i++) {
 //   if (i == 0) {
@@ -10,7 +10,7 @@
 //   }
 // }
 
-// //Leap year check ====================================================
+// //Leap year check 2====================================================
 // const isLeapYear = (year) => {
 //   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
 //     // console.log(year, "Is leap year");
@@ -21,7 +21,7 @@
 
 // isLeapYear(1900);
 
-// //Find largest numbers ====================================================
+// //Find largest numbers 3====================================================
 // const findLargestNumber = (params) => {
 //   let temp = params[0];
 //   for (let i = 0; i < params.length; i++) {
@@ -34,7 +34,7 @@
 
 // // console.log(findLargestNumber([4, 2, 5, 2, 4, 8, 1, 9, 23, 64, 1]));
 
-// =========================================================================
+// // positive negetive finder 4 =========================================================================
 // const checkNumber = (number) => {
 //   if (number > 0) {
 //     return "Positive Number";
@@ -47,7 +47,7 @@
 
 // // console.log(checkNumber(10));
 
-// //find a longest string  ====================================================
+// //find a longest string  5====================================================
 // const findLongestStr = (arr) => {
 //   let temp = "";
 
@@ -71,7 +71,7 @@
 // //   ]),
 // // );
 
-// //Check voting eligibility (18+)====================================================
+// //Check voting eligibility (18+) 6====================================================
 // const votingCondition = (age) => {
 //   if (age < 18) {
 //     return "You are not eligible to vote.";
@@ -82,7 +82,7 @@
 
 // // console.log(votingCondition(24));
 
-// //Check if character is vowel or consonant ====================================================
+// //Check if character is vowel or consonant 7====================================================
 
 // const vowelCheck = (str) => {
 //   const vowels = ["a", "e", "i", "o", "u"];
@@ -104,7 +104,7 @@
 
 // // console.log(vowelCheck("Omit  lll77777 232232aooooollllll hassan RIpon"));
 
-// reverse string====================================================
+// reverse string 8====================================================
 // const reverseStr = (params) => {
 //   const strArr = [];
 //   const str = params.split("");
@@ -118,7 +118,7 @@
 
 // // console.log(reverseStr("mohebur"));
 
-// array star border added  ====================================================
+// array star border added  9====================================================
 // const stringStarBorder = (strArr) => {
 //   let wall = "*".repeat(strArr[0].length + 2);
 //   strArr.unshift(wall);
@@ -131,7 +131,7 @@
 // };
 // //console.log(stringStarBorder(["moh", "cho", "law", "mew"]));
 
-// // prime numbers sum ====================================================
+// // prime numbers sum 10====================================================
 
 // const sumOfPrimeNumbers = (num) => {
 //   let totalPrime = 0;
@@ -150,7 +150,7 @@
 
 // sumOfPrimeNumbers(7600)
 
-// // // find dublicate number =========================================================
+// // // find dublicate number 11=========================================================
 // const nums = [1, 2, 3, 4, 2, 5, 6, 1, 7, 3, 7];
 
 // const findDublicateNumber = (params) => {
@@ -165,7 +165,7 @@
 //   return arr;
 // };
 
-// // //find uniq value ===================================================================
+// // //find uniq value 12===================================================================
 // const nums = [1, 2, 5, 1, 1, 1, 1, 3, 4, 2, 5, 6, 1, 7, 3, 9, 9];
 // const arr = [];
 // const findSingleValue = (params) => {
@@ -180,7 +180,7 @@
 // };
 // findSingleValue(nums)
 
-// //find fizz buzz number ====================================================
+// //find fizz buzz number 13====================================================
 // const fizBuzz = (temp) => {
 //   for (let i = 1; i <= temp; i++) {
 //     if (i % 3 === 0 && i % 5 === 0) {
@@ -197,7 +197,7 @@
 
 // fizBuzz(20);
 
-// //find second largest nummber =============================================
+// //find second largest nummber 14=============================================
 // const nums = [10, 10, 40, 20, 50, 10, 30];
 
 // const findsecondLargestNumber = (params) => {
@@ -217,7 +217,7 @@
 
 // console.log(findsecondLargestNumber(nums));
 
-// //Average of Array =============================================
+// //Average of Array 15=============================================
 
 // const nums = [5, 3, 2, 3];
 
@@ -232,7 +232,7 @@
 
 // averageOfArray(nums);
 
-// // string palindrome =================================================
+// // string palindrome 16=================================================
 // const stringPalindrom = (param) => {
 //   const store = [];
 //   const strArr = param.replace(/\s/g, "").toLowerCase().split("");
@@ -251,7 +251,7 @@
 
 // console.log(stringPalindrom("lo L"));
 
-// // Move All Zeroes [1,3,12,0,0]=====================================
+// // Move All Zeroes [1,3,12,0,0] 17=====================================
 
 // function moveAllZerro(param) {
 //   const numArr = [];
@@ -269,7 +269,7 @@
 
 // console.log(moveAllZerro([0, 1, 0, 8, 0, 6, 0, 3, 12]));
 
-// // array of object findout highest salary employee ================================
+// // array of object findout highest salary employee 18================================
 
 // const staffs = [
 //   { name: "Rahim", salary: 895000 },
@@ -292,7 +292,7 @@
 
 // console.log(findHighestSelery(staffs));
 
-// // replace index value========================================================
+// // replace index value 19========================================================
 // const replaceValue = (arr, replace) => {
 //   for (let i = 0; i < arr.length; i++) {
 //     if (arr[i] === 0) {
@@ -304,32 +304,54 @@
 
 // console.log(replaceValue([2, 3, 1, 9, 0, 7, 0], 10));
 
-const studentInfo = [
-  { subJectName: "Bangla", marks: 98 },
-  { subJectName: "English", marks: 88 },
-  { subJectName: "Ict", marks: 86 },
-  { subJectName: "Math", marks: 76 },
-  { subJectName: "Practical", marks: 20 },
-  { subJectName: "Geography ", marks: 67 },
-];
+// result sheet viwer 20=======================================================
+// const studentInfo = [
+//   { subJectName: "Bangla", marks: 98 },
+//   { subJectName: "English", marks: 88 },
+//   { subJectName: "Ict", marks: 86 },
+//   { subJectName: "Math", marks: 76 },
+//   { subJectName: "Practical", marks: 20 },
+//   { subJectName: "Geography ", marks: 67 },
+// ];
 
-const resultCheck = (studentInfo) => {
-  let totalResult = 0;
-  const faildSub = [];
+// const resultCheck = (studentInfo) => {
+//   let totalResult = 0;
+//   const faildSub = [];
 
-  studentInfo.forEach((element) => {
-    totalResult += element.marks;
+//   studentInfo.forEach((element) => {
+//     totalResult += element.marks;
 
-    if (element.marks < 33) {
-      faildSub.push(element);
-    }
-  });
+//     if (element.marks < 33) {
+//       faildSub.push(element);
+//     }
+//   });
 
-  if (faildSub.length === 0) {
-    return `Congratulation tumi All Subject pass korecho, tomar Total Marks: ${totalResult}`;
-  } else {
-    return `Sorry tumi ${faildSub.length} subject faild korecho, tomar total marks ${totalResult}`;
-  }
+//   if (faildSub.length === 0) {
+//     return `Congratulation tumi All Subject pass korecho, tomar Total Marks: ${totalResult}`;
+//   } else {
+//     return `Sorry tumi ${faildSub.length} subject faild korecho, tomar total marks ${totalResult}`;
+//   }
+// };
+
+// console.log(resultCheck(studentInfo));
+
+// // object key valye swapign 21=====================================================
+
+// '' remove korte parlei ok hobe ekhn ei kaj tai baki ache
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
 };
 
-console.log(resultCheck(studentInfo));
+const objKeyValueSwap = (obj) => {
+  const newObj = {};
+  for (key in obj) {
+    let temp = key;
+    key = obj[key];
+    newObj[key] = temp;
+  }
+  return newObj;
+};
+
+console.log(objKeyValueSwap(obj));
