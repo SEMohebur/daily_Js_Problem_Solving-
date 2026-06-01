@@ -1,4 +1,4 @@
-// // 1-7 soptaho ami Frequency Counter + HashMap pattern problem sikhbo
+// // 1-7 din ami Frequency Counter + HashMap pattern problem sikhbo
 //  //console.log("FCH");
 
 const counterlatterFrequency = (param) => {
