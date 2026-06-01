@@ -389,16 +389,16 @@
 
 // console.log(arrInterSection(arr1, arr2));
 
-// find missing number in array
+// // find missing number in array 24 =============================================
 
-const arr = [1, 2, 3, 5, 6, 7, 8];
-const findMissingNum = (numbers) => {
-  let missingNum = 0;
-  for (let i = 1; i <= numbers.length; i++) {
-    if (arr[i - 1] !== i) {
-      return (missingNum = i);
-    }
-  }
-};
+// const arr = [1, 2, 3, 5, 6, 7, 8];
+// const findMissingNum = (numbers) => {
+//   let missingNum = 0;
+//   for (let i = 1; i <= numbers.length; i++) {
+//     if (arr[i - 1] !== i) {
+//       return (missingNum = i);
+//     }
+//   }
+// };
 
-console.log(findMissingNum(arr));
+// console.log(findMissingNum(arr));
