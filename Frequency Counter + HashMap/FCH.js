@@ -52,15 +52,40 @@
 
 // //Two Sum / use normalFunction for practice perpes 4======================================================
 
-function towSum(arr, targetNum) {
-  const resArr = [];
+// function towSum(arr, targetNum) {
+//   const resArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (arr[i] + arr[j] == targetNum) {
+//         resArr.push(arr.indexOf(arr[i]), arr.indexOf(arr[j]));
+//       }
+//     }
+//   }
+//   return resArr;
+// }
+// console.log(towSum([2, 7, 11, 15], 13));
+
+// Majority Element 4=======================================
+// ekti array te kon number ta besirbhag ache seta ber korte hobe
+
+// nijer moto kore but next eta refector korbo
+function findMejorirtNum(arr) {
+  let result = 0;
+  let numberLengt = 0;
+  const numbersStore = [];
+
   for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] + arr[j] == targetNum) {
-        resArr.push(arr.indexOf(arr[i]), arr.indexOf(arr[j]));
+      if (arr[i] === arr[j]) {
+        numbersStore.push(arr[i]);
+        if (numberLengt < numbersStore.length) {
+          numberLengt = numbersStore.length;
+          result = arr[i];
+        }
       }
     }
   }
-  return resArr;
+  console.log(result);
 }
-console.log(towSum([2, 7, 11, 15], 13));
+
+findMejorirtNum([2, 2, 1, 1, 1, 2, 2]);

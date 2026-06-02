@@ -5,8 +5,9 @@
 ### Easy
 
 <!-- 1. Count Character Frequency /complite -->
-2. Count Word Frequency
-3. Find Duplicate Numbers
+<!-- 2. Count Word Frequency  -->
+<!-- 3. Find Duplicate Numbers -->
+
 4. Find Duplicate Characters
 5. Find Unique Elements
 6. Find First Repeating Element
@@ -22,7 +23,8 @@
 
 ### Medium
 
-16. Two Sum
+<!-- 16. Two Sum -->
+
 17. Majority Element
 18. Find Missing Number Using HashMap
 19. Intersection Of Two Arrays
