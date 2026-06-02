@@ -4,7 +4,7 @@
 
 ### Easy
 
-1. Count Character Frequency
+<!-- 1. Count Character Frequency /complite -->
 2. Count Word Frequency
 3. Find Duplicate Numbers
 4. Find Duplicate Characters
