@@ -68,24 +68,44 @@
 // Majority Element 4=======================================
 // ekti array te kon number ta besirbhag ache seta ber korte hobe
 
-// nijer moto kore but next eta refector korbo
-function findMejorirtNum(arr) {
-  let result = 0;
-  let numberLengt = 0;
-  const numbersStore = [];
+// // nijer moto kore but next eta refector korbo
+// function findMejorirtNum(arr) {
+//   let result = 0;
+//   let numberLengt = 0;
+//   const numbersStore = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] === arr[j]) {
-        numbersStore.push(arr[i]);
-        if (numberLengt < numbersStore.length) {
-          numberLengt = numbersStore.length;
-          result = arr[i];
-        }
-      }
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (arr[i] === arr[j]) {
+//         numbersStore.push(arr[i]);
+//         if (numberLengt < numbersStore.length) {
+//           numberLengt = numbersStore.length;
+//           result = arr[i];
+//         }
+//       }
+//     }
+//   }
+//   console.log(result);
+// }
+
+// findMejorirtNum([2, 2, 1, 1, 1, 2, 2]);
+
+function findMejorityNum(arr) {
+  const freqObj = {};
+
+  for (let item of arr) {
+    if (!freqObj[item]) {
+      freqObj[item] = 1;
+    } else {
+      freqObj[item] = freqObj[item] + 1;
     }
   }
-  console.log(result);
+
+  for (let key in freqObj) {
+    if (freqObj[key] > arr.length / 2) {
+      return Number(key);
+    }
+  }
 }
 
-findMejorirtNum([2, 2, 1, 1, 1, 2, 2]);
+console.log(findMejorityNum([2, 2, 1]));
