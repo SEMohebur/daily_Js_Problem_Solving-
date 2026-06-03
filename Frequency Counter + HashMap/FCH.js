@@ -88,7 +88,7 @@
 //   console.log(result);
 // }
 
-// findMejorirtNum([2, 2, 1, 1, 1, 2, 2]);
+// // findMejorirtNum([2, 2, 1, 1, 1, 2, 2]); 5=====================================
 
 // function findMejorityNum(arr) {
 //   const freqObj = {};
@@ -110,26 +110,28 @@
 
 // console.log(findMejorityNum([2, 2, 1]));
 
-const findUniqElement = (arr) => {
-  const obj = {};
-  const uniqNumbers = [];
+// //find uniq numbers 6===========================================
 
-  for (let i = 0; i < arr.length; i++) {
-    if (!obj[arr[i]]) {
-      obj[arr[i]] = 1;
-    } else {
-      obj[arr[i]] = obj[arr[i]] + 1;
-    }
-  }
-  for (let key in obj) {
-    if (obj[key] == 1) {
-      uniqNumbers.push(key);
-    }
-  }
-  if (uniqNumbers.length === 0) {
-    return "Not Found Uniq Number";
-  } else {
-    return uniqNumbers;
-  }
-};
-console.log(findUniqElement([1, 1, 4, 2, 2]));
+// const findUniqElement = (arr) => {
+//   const obj = {};
+//   const uniqNumbers = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!obj[arr[i]]) {
+//       obj[arr[i]] = 1;
+//     } else {
+//       obj[arr[i]] = obj[arr[i]] + 1;
+//     }
+//   }
+//   for (let key in obj) {
+//     if (obj[key] == 1) {
+//       uniqNumbers.push(key);
+//     }
+//   }
+//   if (uniqNumbers.length === 0) {
+//     return "Not Found Uniq Number";
+//   } else {
+//     return uniqNumbers;
+//   }
+// };
+// console.log(findUniqElement([1, 1, 4, 2, 2]));
