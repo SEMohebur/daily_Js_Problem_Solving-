@@ -25,7 +25,8 @@
 
 <!-- 16. Two Sum -->
 
-17. Majority Element
+<!-- 17. Majority Element -->
+
 18. Find Missing Number Using HashMap
 19. Intersection Of Two Arrays
 20. Difference Between Two Arrays

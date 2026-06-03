@@ -90,22 +90,46 @@
 
 // findMejorirtNum([2, 2, 1, 1, 1, 2, 2]);
 
-function findMejorityNum(arr) {
-  const freqObj = {};
+// function findMejorityNum(arr) {
+//   const freqObj = {};
 
-  for (let item of arr) {
-    if (!freqObj[item]) {
-      freqObj[item] = 1;
+//   for (let item of arr) {
+//     if (!freqObj[item]) {
+//       freqObj[item] = 1;
+//     } else {
+//       freqObj[item] = freqObj[item] + 1;
+//     }
+//   }
+
+//   for (let key in freqObj) {
+//     if (freqObj[key] > arr.length / 2) {
+//       return Number(key);
+//     }
+//   }
+// }
+
+// console.log(findMejorityNum([2, 2, 1]));
+
+const findUniqElement = (arr) => {
+  const obj = {};
+  const uniqNumbers = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!obj[arr[i]]) {
+      obj[arr[i]] = 1;
     } else {
-      freqObj[item] = freqObj[item] + 1;
+      obj[arr[i]] = obj[arr[i]] + 1;
     }
   }
-
-  for (let key in freqObj) {
-    if (freqObj[key] > arr.length / 2) {
-      return Number(key);
+  for (let key in obj) {
+    if (obj[key] == 1) {
+      uniqNumbers.push(key);
     }
   }
-}
-
-console.log(findMejorityNum([2, 2, 1]));
+  if (uniqNumbers.length === 0) {
+    return "Not Found Uniq Number";
+  } else {
+    return uniqNumbers;
+  }
+};
+console.log(findUniqElement([1, 1, 4, 2, 2]));
