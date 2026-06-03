@@ -9,17 +9,17 @@
 <!-- 3. Find Duplicate Numbers -->
 
 4. Find Duplicate Characters
-5. Find Unique Elements
-6. Find First Repeating Element
-7. Find First Non-Repeating Character
-8. Contains Duplicate
-9. Check Anagram
-10. Check Valid Anagram
-11. Find Frequency Of Each Number
-12. Most Frequent Character
-13. Most Frequent Number
-14. Count Vowels Frequency
-15. Count Occurrences Of Target
+<!-- 5. Find Unique Elements -->
+5. Find First Repeating Element
+6. Find First Non-Repeating Character
+7. Contains Duplicate
+8. Check Anagram
+9. Check Valid Anagram
+10. Find Frequency Of Each Number
+11. Most Frequent Character
+12. Most Frequent Number
+13. Count Vowels Frequency
+14. Count Occurrences Of Target
 
 ### Medium
 

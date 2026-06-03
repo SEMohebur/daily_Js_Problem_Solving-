@@ -135,3 +135,21 @@
 //   }
 // };
 // console.log(findUniqElement([1, 1, 4, 2, 2]));
+
+// Find First Repeating Element 7==========================================
+
+function findFirstRepetingEle(arr) {
+  const obj = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!obj[arr[i]]) {
+      obj[arr[i]] = 1;
+    } else {
+      return arr[i];
+    }
+  }
+
+  return null;
+}
+
+console.log(findFirstRepetingEle([10, 20, 30, 40, 20, 40, 10]));
