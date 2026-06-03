@@ -136,20 +136,44 @@
 // };
 // console.log(findUniqElement([1, 1, 4, 2, 2]));
 
-// Find First Repeating Element 7==========================================
+// //Find First Repeating Element 7==========================================
 
-function findFirstRepetingEle(arr) {
+// function findFirstRepetingEle(arr) {
+//   const obj = {};
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!obj[arr[i]]) {
+//       obj[arr[i]] = 1;
+//     } else {
+//       return arr[i];
+//     }
+//   }
+
+//   return null;
+// }
+
+// console.log(findFirstRepetingEle([10, 20, 30, 40, 20, 40, 10]));
+
+// Find First Non-Repeating Character 8===========================================
+const findFirstNonRepChar = (str) => {
+  const strArr = Array.from(str);
   const obj = {};
 
-  for (let i = 0; i < arr.length; i++) {
-    if (!obj[arr[i]]) {
-      obj[arr[i]] = 1;
+  for (let i = 0; i < strArr.length; i++) {
+    if (!obj[strArr[i]]) {
+      obj[strArr[i]] = 1;
     } else {
-      return arr[i];
+      obj[strArr[i]] = obj[strArr[i]] + 1;
+    }
+  }
+
+  for (let key in obj) {
+    if (obj[key] === 1) {
+      return key;
     }
   }
 
   return null;
-}
+};
 
-console.log(findFirstRepetingEle([10, 20, 30, 40, 20, 40, 10]));
+console.log(findFirstNonRepChar("aabbcdeff"));
