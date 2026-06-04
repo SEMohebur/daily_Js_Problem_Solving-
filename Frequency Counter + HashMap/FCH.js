@@ -179,31 +179,49 @@
 // console.log(findFirstNonRepChar("aabbcdeff"));
 
 // // FInd  Most Frequent Character. 9======================================
-const findMostFreqChar = (param) => {
-  const obj = {};
+// const findMostFreqChar = (param) => {
+//   const obj = {};
 
-  let charCounter = 0;
-  let result = "";
-  const strArr = Array.from(param);
-  for (let i = 0; i < strArr.length; i++) {
-    if (obj[strArr[i]]) {
-      obj[strArr[i]] = obj[strArr[i]] + 1;
-    } else {
-      obj[strArr[i]] = 1;
+//   let charCounter = 0;
+//   let result = "";
+//   const strArr = Array.from(param);
+//   for (let i = 0; i < strArr.length; i++) {
+//     if (obj[strArr[i]]) {
+//       obj[strArr[i]] = obj[strArr[i]] + 1;
+//     } else {
+//       obj[strArr[i]] = 1;
+//     }
+//   }
+
+//   for (let key in obj) {
+//     if (charCounter < obj[key]) {
+//       charCounter = obj[key];
+//       result = key;
+//     }
+//   }
+//   if (result) {
+//     return result;
+//   } else {
+//     return null;
+//   }
+// };
+
+// console.log(findMostFreqChar("lojkgod"));
+
+// // Find Missing Number Using HashMap 10======================================
+
+function findMissingNumber(arr) {
+  const map = {};
+
+  for (let num of arr) {
+    map[num] = true;
+  }
+
+  for (let i = 1; i <= arr.length + 1; i++) {
+    if (!map[i]) {
+      return i;
     }
   }
+}
 
-  for (let key in obj) {
-    if (charCounter < obj[key]) {
-      charCounter = obj[key];
-      result = key;
-    }
-  }
-  if (result) {
-    return result;
-  } else {
-    return null;
-  }
-};
-
-console.log(findMostFreqChar("lojkgod"));
+console.log(findMissingNumber([1, 2, 3, 4, 5, 6]));
