@@ -154,26 +154,56 @@
 
 // console.log(findFirstRepetingEle([10, 20, 30, 40, 20, 40, 10]));
 
-// Find First Non-Repeating Character 8===========================================
-const findFirstNonRepChar = (str) => {
-  const strArr = Array.from(str);
+// // Find First Non-Repeating Character 8===========================================
+// const findFirstNonRepChar = (str) => {
+//   const strArr = Array.from(str);
+//   const obj = {};
+
+//   for (let i = 0; i < strArr.length; i++) {
+//     if (!obj[strArr[i]]) {
+//       obj[strArr[i]] = 1;
+//     } else {
+//       obj[strArr[i]] = obj[strArr[i]] + 1;
+//     }
+//   }
+
+//   for (let key in obj) {
+//     if (obj[key] === 1) {
+//       return key;
+//     }
+//   }
+
+//   return null;
+// };
+
+// console.log(findFirstNonRepChar("aabbcdeff"));
+
+// // FInd  Most Frequent Character. 9======================================
+const findMostFreqChar = (param) => {
   const obj = {};
 
+  let charCounter = 0;
+  let result = "";
+  const strArr = Array.from(param);
   for (let i = 0; i < strArr.length; i++) {
-    if (!obj[strArr[i]]) {
-      obj[strArr[i]] = 1;
-    } else {
+    if (obj[strArr[i]]) {
       obj[strArr[i]] = obj[strArr[i]] + 1;
+    } else {
+      obj[strArr[i]] = 1;
     }
   }
 
   for (let key in obj) {
-    if (obj[key] === 1) {
-      return key;
+    if (charCounter < obj[key]) {
+      charCounter = obj[key];
+      result = key;
     }
   }
-
-  return null;
+  if (result) {
+    return result;
+  } else {
+    return null;
+  }
 };
 
-console.log(findFirstNonRepChar("aabbcdeff"));
+console.log(findMostFreqChar("lojkgod"));

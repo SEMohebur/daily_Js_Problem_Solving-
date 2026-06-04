@@ -17,9 +17,9 @@
 7. Check Valid Anagram
 8. Find Frequency Of Each Number
 9. Most Frequent Character
-10. Most Frequent Number
-11. Count Vowels Frequency
-12. Count Occurrences Of Target
+<!-- 10. Most Frequent Number -->
+10. Count Vowels Frequency
+11. Count Occurrences Of Target
 
 ### Medium
 
