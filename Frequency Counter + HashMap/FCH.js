@@ -210,18 +210,38 @@
 
 // // Find Missing Number Using HashMap 10======================================
 
-function findMissingNumber(arr) {
-  const map = {};
+// function findMissingNumber(arr) {
+//   const map = {};
 
-  for (let num of arr) {
-    map[num] = true;
-  }
+//   for (let num of arr) {
+//     map[num] = true;
+//   }
 
-  for (let i = 1; i <= arr.length + 1; i++) {
-    if (!map[i]) {
-      return i;
+//   for (let i = 1; i <= arr.length + 1; i++) {
+//     if (!map[i]) {
+//       return i;
+//     }
+//   }
+// }
+
+// console.log(findMissingNumber([1, 2, 3, 4, 5, 6]));
+
+// Intersection Of Two Arrays 11==========================================
+
+arr1 = [1, 0, 2, 20, 3, 9];
+arr2 = [0, 20, 5, 3];
+
+const intersectionTwoArr = (arr1, arr2) => {
+  const set = new Set(arr2);
+  const res = [];
+
+  for (let num of arr1) {
+    if (set.has(num)) {
+      res.push(num);
     }
   }
-}
 
-console.log(findMissingNumber([1, 2, 3, 4, 5, 6]));
+  return res;
+};
+
+console.log(intersectionTwoArr(arr1, arr2));
