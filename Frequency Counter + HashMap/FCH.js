@@ -314,18 +314,37 @@
 
 // console.log(findDuplicateCharacters("programming"));
 
-// Count Vowels Frequency 15=====================================
-function countVowelFrequency(str) {
-  const vowels = new Set(["a", "e", "i", "o", "u"]);
+// // Count Vowels Frequency 15=====================================
+// function countVowelFrequency(str) {
+//   const vowels = new Set(["a", "e", "i", "o", "u"]);
+//   const freq = {};
+
+//   for (let ch of str.toLowerCase()) {
+//     if (vowels.has(ch)) {
+//       freq[ch] = (freq[ch] || 0) + 1;
+//     }
+//   }
+
+//   return freq;
+// }
+
+// console.log(countVowelFrequency("amar name mohebur"));
+
+// First Non-Repeating Character 16=================================
+function firstNonRepeatingChar(str) {
   const freq = {};
 
-  for (let ch of str.toLowerCase()) {
-    if (vowels.has(ch)) {
-      freq[ch] = (freq[ch] || 0) + 1;
+  for (let ch of str) {
+    freq[ch] = (freq[ch] || 0) + 1;
+  }
+
+  for (let ch of str) {
+    if (freq[ch] === 1) {
+      return ch;
     }
   }
 
-  return freq;
+  return -1;
 }
 
-console.log(countVowelFrequency("amar name mohebur"));
+console.log(firstNonRepeatingChar("jhanduBulm"));
