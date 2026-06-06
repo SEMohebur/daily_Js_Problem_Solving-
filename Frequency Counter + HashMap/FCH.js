@@ -246,30 +246,49 @@
 
 // console.log(intersectionTwoArr(arr1, arr2));
 
-// Difference Between Two Arrays 12======================================
+// // Difference Between Two Arrays 12======================================
 
-arr1 = [1, 2, 3, 4];
-arr2 = [2, 4, 6, 8];
+// arr1 = [1, 2, 3, 4];
+// arr2 = [2, 4, 6, 8];
 
-const defferenceTwoArr = (arr1, arr2) => {
-  const setArr1 = new Set(arr1);
-  const setArr2 = new Set(arr2);
+// const defferenceTwoArr = (arr1, arr2) => {
+//   const setArr1 = new Set(arr1);
+//   const setArr2 = new Set(arr2);
 
-  const arr1Only = [];
-  const arr2Only = [];
+//   const arr1Only = [];
+//   const arr2Only = [];
 
-  for (let num of setArr1) {
-    if (!setArr2.has(num)) {
-      arr1Only.push(num);
+//   for (let num of setArr1) {
+//     if (!setArr2.has(num)) {
+//       arr1Only.push(num);
+//     }
+//   }
+
+//   for (let num of setArr2) {
+//     if (!setArr1.has(num)) {
+//       arr2Only.push(num);
+//     }
+//   }
+//   return [arr1Only, arr2Only];
+// };
+
+// console.log(defferenceTwoArr(arr1, arr2));
+
+function findDuplicates(nums) {
+  const freq = {};
+  const result = [];
+
+  for (let num of nums) {
+    freq[num] = (freq[num] || 0) + 1;
+  }
+
+  for (let key in freq) {
+    if (freq[key] > 1) {
+      result.push(Number(key));
     }
   }
 
-  for (let num of setArr2) {
-    if (!setArr1.has(num)) {
-      arr2Only.push(num);
-    }
-  }
-  return [arr1Only, arr2Only];
-};
+  return result;
+}
 
-console.log(defferenceTwoArr(arr1, arr2));
+console.log(findDuplicates([1, 5, 4, 6, 4, 8, 2, 4, 1, 6]));
