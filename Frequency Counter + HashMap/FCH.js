@@ -294,21 +294,38 @@
 
 // console.log(findDuplicates([1, 5, 4, 6, 4, 8, 2, 4, 1, 6]));
 
-function findDuplicateCharacters(str) {
+// // Find Duplicate Characters 14========================================
+// function findDuplicateCharacters(str) {
+//   const freq = {};
+//   const result = [];
+
+//   for (let ch of str) {
+//     freq[ch] = (freq[ch] || 0) + 1;
+//   }
+
+//   for (let ch in freq) {
+//     if (freq[ch] > 1) {
+//       result.push(ch);
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(findDuplicateCharacters("programming"));
+
+// Count Vowels Frequency 15=====================================
+function countVowelFrequency(str) {
+  const vowels = new Set(["a", "e", "i", "o", "u"]);
   const freq = {};
-  const result = [];
 
-  for (let ch of str) {
-    freq[ch] = (freq[ch] || 0) + 1;
-  }
-
-  for (let ch in freq) {
-    if (freq[ch] > 1) {
-      result.push(ch);
+  for (let ch of str.toLowerCase()) {
+    if (vowels.has(ch)) {
+      freq[ch] = (freq[ch] || 0) + 1;
     }
   }
 
-  return result;
+  return freq;
 }
 
-console.log(findDuplicateCharacters("programming"));
+console.log(countVowelFrequency("amar name mohebur"));
