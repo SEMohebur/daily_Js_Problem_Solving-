@@ -226,22 +226,50 @@
 
 // console.log(findMissingNumber([1, 2, 3, 4, 5, 6]));
 
-// Intersection Of Two Arrays 11==========================================
+// // Intersection Of Two Arrays 11==========================================
 
-arr1 = [1, 0, 2, 20, 3, 9];
-arr2 = [0, 20, 5, 3];
+// arr1 = [1, 0, 2, 20, 3, 9];
+// arr2 = [0, 20, 5, 3];
 
-const intersectionTwoArr = (arr1, arr2) => {
-  const set = new Set(arr2);
-  const res = [];
+// const intersectionTwoArr = (arr1, arr2) => {
+//   const set = new Set(arr2);
+//   const res = [];
 
-  for (let num of arr1) {
-    if (set.has(num)) {
-      res.push(num);
+//   for (let num of arr1) {
+//     if (set.has(num)) {
+//       res.push(num);
+//     }
+//   }
+
+//   return res;
+// };
+
+// console.log(intersectionTwoArr(arr1, arr2));
+
+// Difference Between Two Arrays 12======================================
+
+arr1 = [1, 2, 3, 4];
+arr2 = [2, 4, 6, 8];
+
+const defferenceTwoArr = (arr1, arr2) => {
+  const setArr1 = new Set(arr1);
+  const setArr2 = new Set(arr2);
+
+  const arr1Only = [];
+  const arr2Only = [];
+
+  for (let num of setArr1) {
+    if (!setArr2.has(num)) {
+      arr1Only.push(num);
     }
   }
 
-  return res;
+  for (let num of setArr2) {
+    if (!setArr1.has(num)) {
+      arr2Only.push(num);
+    }
+  }
+  return [arr1Only, arr2Only];
 };
 
-console.log(intersectionTwoArr(arr1, arr2));
+console.log(defferenceTwoArr(arr1, arr2));
