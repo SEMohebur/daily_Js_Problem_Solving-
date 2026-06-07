@@ -349,18 +349,35 @@
 
 // console.log(firstNonRepeatingChar("jhanduBulm"));
 
-// Count Occurrences Of Target 17=================================
+// // Count Occurrences Of Target 17=================================
 
-const countTargetNumber = (arr, targetNum) => {
-  const countArr = [];
-  arr.forEach((element) => {
-    if (element === targetNum) {
-      countArr.push(element);
+// const countTargetNumber = (arr, targetNum) => {
+//   const countArr = [];
+//   arr.forEach((element) => {
+//     if (element === targetNum) {
+//       countArr.push(element);
+//     }
+//   });
+//   return countArr.length;
+// };
+
+// console.log(
+//   countTargetNumber([1, 5, 3, 6, 7, 4, 3, 4, 3, 5, 3, 5, 6, 2, 1, 8], 3),
+// );
+
+// Contains Duplicate 18===========================================
+
+const containsDuplicate = (arr) => {
+  const obj = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!obj[arr[i]]) {
+      obj[arr[i]] = 1;
+    } else {
+      return true;
     }
-  });
-  return countArr.length;
+  }
+  return false;
 };
 
-console.log(
-  countTargetNumber([1, 5, 3, 6, 7, 4, 3, 4, 3, 5, 3, 5, 6, 2, 1, 8], 3),
-);
+console.log(containsDuplicate([2, 5, 1, 7, 8, 9, 0, 4, 1, 5, 6, 8, 3, 5]));
