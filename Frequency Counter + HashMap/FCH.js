@@ -330,21 +330,37 @@
 
 // console.log(countVowelFrequency("amar name mohebur"));
 
-// First Non-Repeating Character 16=================================
-function firstNonRepeatingChar(str) {
-  const freq = {};
+// // First Non-Repeating Character 16=================================
+// function firstNonRepeatingChar(str) {
+//   const freq = {};
 
-  for (let ch of str) {
-    freq[ch] = (freq[ch] || 0) + 1;
-  }
+//   for (let ch of str) {
+//     freq[ch] = (freq[ch] || 0) + 1;
+//   }
 
-  for (let ch of str) {
-    if (freq[ch] === 1) {
-      return ch;
+//   for (let ch of str) {
+//     if (freq[ch] === 1) {
+//       return ch;
+//     }
+//   }
+
+//   return -1;
+// }
+
+// console.log(firstNonRepeatingChar("jhanduBulm"));
+
+// Count Occurrences Of Target 17=================================
+
+const countTargetNumber = (arr, targetNum) => {
+  const countArr = [];
+  arr.forEach((element) => {
+    if (element === targetNum) {
+      countArr.push(element);
     }
-  }
+  });
+  return countArr.length;
+};
 
-  return -1;
-}
-
-console.log(firstNonRepeatingChar("jhanduBulm"));
+console.log(
+  countTargetNumber([1, 5, 3, 6, 7, 4, 3, 4, 3, 5, 3, 5, 6, 2, 1, 8], 3),
+);

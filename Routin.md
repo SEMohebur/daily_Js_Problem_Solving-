@@ -8,18 +8,19 @@
 <!-- 2. Count Word Frequency  -->
 <!-- 3. Find Duplicate Numbers -->
 
-4. Find Duplicate Characters
+<!-- 4. Find Duplicate Characters -->
    <!-- 5. Find Unique Elements -->
    <!-- 5. Find First Repeating Element -->
    <!-- 6. Find First Non-Repeating Character -->
+
 5. Contains Duplicate
 6. Check Anagram
 7. Check Valid Anagram
 8. Find Frequency Of Each Number
 9. Most Frequent Character
-<!-- 10. Most Frequent Number -->
-10. Count Vowels Frequency
-11. Count Occurrences Of Target
+      <!-- 10. Most Frequent Number -->
+      <!-- 10. Count Vowels Frequency -->
+   <!-- 10. Count Occurrences Of Target -->
 
 ### Medium
 
@@ -33,10 +34,10 @@
 <!-- 20. Difference Between Two Arrays -->
 
 21. Group Anagrams
-22. Find All Duplicates In Array
-23. Top K Frequent Elements
-24. Longest Consecutive Sequence
-25. Find Common Characters
+<!-- 22. Find All Duplicates In Array -->
+22. Top K Frequent Elements
+23. Longest Consecutive Sequence
+24. Find Common Characters
 
 ### Medium+
 
