@@ -13,14 +13,12 @@
    <!-- 5. Find First Repeating Element -->
    <!-- 6. Find First Non-Repeating Character -->
 
-5. Contains Duplicate
+<!-- 5. Contains Duplicate -->
+
 6. Check Anagram
 7. Check Valid Anagram
 8. Find Frequency Of Each Number
-9. Most Frequent Character
-      <!-- 10. Most Frequent Number -->
-      <!-- 10. Count Vowels Frequency -->
-   <!-- 10. Count Occurrences Of Target -->
+9. Most Frequent Character 10. Most Frequent Number 10. Count Vowels Frequency 10. Count Occurrences Of Target
 
 ### Medium
 

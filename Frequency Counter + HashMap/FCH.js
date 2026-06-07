@@ -365,19 +365,34 @@
 //   countTargetNumber([1, 5, 3, 6, 7, 4, 3, 4, 3, 5, 3, 5, 6, 2, 1, 8], 3),
 // );
 
-// Contains Duplicate 18===========================================
+// // Contains Duplicate 18===========================================
 
-const containsDuplicate = (arr) => {
-  const obj = {};
+// const containsDuplicate = (arr) => {
+//   const obj = {};
 
-  for (let i = 0; i < arr.length; i++) {
-    if (!obj[arr[i]]) {
-      obj[arr[i]] = 1;
-    } else {
-      return true;
-    }
-  }
-  return false;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!obj[arr[i]]) {
+//       obj[arr[i]] = 1;
+//     } else {
+//       return true;
+//     }
+//   }
+//   return false;
+// };
+
+// console.log(containsDuplicate([2, 5, 1, 7, 8, 9, 0, 4, 1, 5, 6, 8, 3, 5]));
+
+// Reverse String 19===================================
+const reversString = (str) => {
+  const store = [];
+  const strArr = str.split("");
+
+  strArr.forEach((element) => {
+    store.unshift(element);
+  });
+
+  const result = store.join("");
+  return result;
 };
 
-console.log(containsDuplicate([2, 5, 1, 7, 8, 9, 0, 4, 1, 5, 6, 8, 3, 5]));
+console.log(reversString("mohebur"));
