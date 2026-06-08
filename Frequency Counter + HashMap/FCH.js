@@ -382,17 +382,17 @@
 
 // console.log(containsDuplicate([2, 5, 1, 7, 8, 9, 0, 4, 1, 5, 6, 8, 3, 5]));
 
-// Reverse String 19===================================
-const reversString = (str) => {
-  const store = [];
-  const strArr = str.split("");
+// // Reverse String 19=============================================
+// const reversString = (str) => {
+//   const store = [];
+//   const strArr = str.split("");
 
-  strArr.forEach((element) => {
-    store.unshift(element);
-  });
+//   strArr.forEach((element) => {
+//     store.unshift(element);
+//   });
 
-  const result = store.join("");
-  return result;
-};
+//   const result = store.join("");
+//   return result;
+// };
 
-console.log(reversString("mohebur"));
+// console.log(reversString("mohebur"));
