@@ -38,9 +38,17 @@
 
 // console.log(findLongestNumber([3, 7, 5]));
 
-const findLongestNumber = (arr) => {
-  let longestNum = Math.max(...arr);
-  return longestNum;
+// const findLongestNumber = (arr) => {
+//   let longestNum = Math.max(...arr);
+//   return longestNum;
+// };
+
+// console.log(findLongestNumber([3, 7, 5]));
+
+// Celsius to Fahrenheit 3===================================
+const celsiusToFahrenheit = (c) => {
+  let F = (c * 9) / 5 + 32;
+  return F;
 };
 
-console.log(findLongestNumber([3, 7, 5]));
+console.log(celsiusToFahrenheit(100));
