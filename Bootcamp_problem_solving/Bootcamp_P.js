@@ -26,14 +26,21 @@
 // console.log(checkEvenOdd(7));
 
 //  Find the Largest of Three Numbers 2===========================================
+// const findLongestNumber = (arr) => {
+//   let longestNumber = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (longestNumber < arr[i]) {
+//       longestNumber = arr[i];
+//     }
+//   }
+//   return longestNumber;
+// };
+
+// console.log(findLongestNumber([3, 7, 5]));
+
 const findLongestNumber = (arr) => {
-  let longestNumber = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (longestNumber < arr[i]) {
-      longestNumber = arr[i];
-    }
-  }
-  return longestNumber;
+  let longestNum = Math.max(...arr);
+  return longestNum;
 };
 
 console.log(findLongestNumber([3, 7, 5]));
