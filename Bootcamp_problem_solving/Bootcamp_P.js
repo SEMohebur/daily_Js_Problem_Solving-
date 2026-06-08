@@ -53,16 +53,29 @@
 
 // console.log(celsiusToFahrenheit(100));
 
-// Check Positive, Negative or Zero 4==================================
+// // Check Positive, Negative or Zero 4==================================
 
-const checkPositiveOrNegetiveNum = (n) => {
-  if (n === 0) {
-    return "Zero";
-  } else if (n < 0) {
-    return "Negative";
-  } else {
-    return "Positive";
-  }
+// const checkPositiveOrNegetiveNum = (n) => {
+//   if (n === 0) {
+//     return "Zero";
+//   } else if (n < 0) {
+//     return "Negative";
+//   } else {
+//     return "Positive";
+//   }
+// };
+
+// console.log(checkPositiveOrNegetiveNum(0));
+
+//  Swap Two Variables 5======================================
+
+let a = 5;
+let b = 10;
+
+const swapTwoVariable = (...param) => {
+  [a, b] = [b, a];
+
+  return [a, b];
 };
 
-console.log(checkPositiveOrNegetiveNum(0));
+console.log(swapTwoVariable(a, b));
