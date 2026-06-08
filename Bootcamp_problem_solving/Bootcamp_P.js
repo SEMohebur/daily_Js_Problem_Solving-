@@ -45,10 +45,24 @@
 
 // console.log(findLongestNumber([3, 7, 5]));
 
-// Celsius to Fahrenheit 3===================================
-const celsiusToFahrenheit = (c) => {
-  let F = (c * 9) / 5 + 32;
-  return F;
+// // Celsius to Fahrenheit 3===================================
+// const celsiusToFahrenheit = (c) => {
+//   let F = (c * 9) / 5 + 32;
+//   return F;
+// };
+
+// console.log(celsiusToFahrenheit(100));
+
+// Check Positive, Negative or Zero 4==================================
+
+const checkPositiveOrNegetiveNum = (n) => {
+  if (n === 0) {
+    return "Zero";
+  } else if (n < 0) {
+    return "Negative";
+  } else {
+    return "Positive";
+  }
 };
 
-console.log(celsiusToFahrenheit(100));
+console.log(checkPositiveOrNegetiveNum(0));
