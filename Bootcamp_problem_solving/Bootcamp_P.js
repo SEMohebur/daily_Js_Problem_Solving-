@@ -122,17 +122,45 @@
 
 // console.log(isPelindrome("121"));
 
-// Capitalize First Letter of Each Word 9==================================
-const capitalizeFirstLetter = (param) => {
-  const strArr = param.split(" ");
+// // Capitalize First Letter of Each Word 9==================================
+// const capitalizeFirstLetter = (param) => {
+//   const strArr = param.split(" ");
 
-  const arr = [];
+//   const arr = [];
 
-  for (let i = 0; i <= strArr.length - 1; i++) {
-    arr.push(strArr[i].slice(0, 1).toUpperCase() + strArr[i].slice(1));
+//   for (let i = 0; i <= strArr.length - 1; i++) {
+//     arr.push(strArr[i].slice(0, 1).toUpperCase() + strArr[i].slice(1));
+//   }
+
+//   return arr.join(" ");
+// };
+
+// console.log(capitalizeFirstLetter("hello worldddd"));
+
+// Count Occurrences of a Character 10==================================
+
+const countOccurrencesofCharacter = (param) => {
+  let count = 0;
+  let word = "";
+  const obj = {};
+
+  const arr = Array.from(param);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!obj[arr[i]]) {
+      obj[arr[i]] = 1;
+    } else {
+      obj[arr[i]] = obj[arr[i]] + 1;
+    }
   }
 
-  return arr.join(" ");
+  for (let num in obj) {
+    if (count < obj[num]) {
+      count = obj[num];
+      word = num;
+    }
+  }
+  return { word, count };
 };
 
-console.log(capitalizeFirstLetter("hello worldddd"));
+console.log(countOccurrencesofCharacter("banana"));
