@@ -104,20 +104,35 @@
 
 // console.log(countVowels("javascript"));
 
-//  Check Palindrome 8==============================================
+// //  Check Palindrome 8==============================================
 
-const isPelindrome = (str) => {
+// const isPelindrome = (str) => {
+//   const arr = [];
+//   for (let i = 0; i < str.length; i++) {
+//     arr.unshift(str[i]);
+//   }
+
+//   const strJoin = arr.join("");
+//   if (str === strJoin) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// console.log(isPelindrome("121"));
+
+// Capitalize First Letter of Each Word 9==================================
+const capitalizeFirstLetter = (param) => {
+  const strArr = param.split(" ");
+
   const arr = [];
-  for (let i = 0; i < str.length; i++) {
-    arr.unshift(str[i]);
+
+  for (let i = 0; i <= strArr.length - 1; i++) {
+    arr.push(strArr[i].slice(0, 1).toUpperCase() + strArr[i].slice(1));
   }
 
-  const strJoin = arr.join("");
-  if (str === strJoin) {
-    return true;
-  } else {
-    return false;
-  }
+  return arr.join(" ");
 };
 
-console.log(isPelindrome("121"));
+console.log(capitalizeFirstLetter("hello worldddd"));
