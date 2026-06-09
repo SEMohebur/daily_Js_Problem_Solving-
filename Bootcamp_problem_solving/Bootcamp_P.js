@@ -1,8 +1,8 @@
 // bootcamp problem solving practice
 
-/////////// Day 1///////////////////
+/////////// Day 1///////////////////////////////////////////////
 
-// Check Even or Odd  1===========================
+// // Check Even or Odd  1===========================
 // const checkEvenOdd = (param) => {
 //   for (let i = 1; i <= param; i++) {
 //     if (i % 2 === 0) {
@@ -67,15 +67,57 @@
 
 // console.log(checkPositiveOrNegetiveNum(0));
 
-//  Swap Two Variables 5======================================
+// //  Swap Two Variables 5======================================
 
-let a = 5;
-let b = 10;
+// let a = 5;
+// let b = 10;
 
-const swapTwoVariable = (...param) => {
-  [a, b] = [b, a];
+// const swapTwoVariable = (...param) => {
+//   return ([a, b] = [b, a]);
+// };
 
-  return [a, b];
+// console.log(swapTwoVariable(a, b));
+
+/////////// Day 2//////////////////////////////////////////////////////
+
+// Reverse a String  6=====================================
+
+// const reverseString = (str) => {
+//   const strArr = str.split("").reverse().join("");
+//   return strArr;
+// };
+
+// console.log(reverseString("'world"));
+
+// //  Count Vowels in a String  7===============================
+
+// const countVowels = (str) => {
+//   let counter = 0;
+//   const vowels = ["a", "e", "i", "o", "u"];
+//   for (let i = 0; i < str.length; i++) {
+//     if (vowels.includes(str[i].toLowerCase())) {
+//       counter++;
+//     }
+//   }
+//   return counter;
+// };
+
+// console.log(countVowels("javascript"));
+
+//  Check Palindrome 8==============================================
+
+const isPelindrome = (str) => {
+  const arr = [];
+  for (let i = 0; i < str.length; i++) {
+    arr.unshift(str[i]);
+  }
+
+  const strJoin = arr.join("");
+  if (str === strJoin) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-console.log(swapTwoVariable(a, b));
+console.log(isPelindrome("121"));
