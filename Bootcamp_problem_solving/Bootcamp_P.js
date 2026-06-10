@@ -211,14 +211,24 @@
 
 // console.log(removeDublicateNum([1, 2, 2, 3, 3, 4]));
 
-const removeDublicateNum = (arr) => {
-  const resArr = [];
+// // deffrent way
+// const removeDublicateNum = (arr) => {
+//   const resArr = [];
 
-  for (let item of arr) {
-    if (!resArr.includes(item)) {
-      resArr.push(item);
-    }
-  }
-  return resArr;
+//   for (let item of arr) {
+//     if (!resArr.includes(item)) {
+//       resArr.push(item);
+//     }
+//   }
+//   return resArr;
+// };
+// console.log(removeDublicateNum([1, 2, 2, 3, 3, 4]));
+
+// Flatten a Nested Array  14==============================================
+
+const NestedToFlatArray = (arr) => {
+  let res = arr.flat(arr.length);
+  console.log(res);
 };
-console.log(removeDublicateNum([1, 2, 2, 3, 3, 4]));
+
+NestedToFlatArray([1, [2, 3], [4, 5]]);
