@@ -167,10 +167,23 @@
 
 ////////////////////////Day 3 ////////////////////////////////////////
 
-// Find the Sum of an Array 11=============================================
+// // Find the Sum of an Array 11=============================================
+
+// // //Easy way
+// const sumOfArray = (arr) => {
+//   return (res = arr.reduce((sum, item) => (sum += item)));
+// };
+
+// console.log(sumOfArray([1, 2, 3, 4, 5]));
+
+// // //try to deffrent way
 
 const sumOfArray = (arr) => {
-  return (res = arr.reduce((sum, item) => (sum += item)));
+  let result = 0;
+  for (let i = 0; i < arr.length; i++) {
+    result += arr[i];
+  }
+  return result;
 };
 
 console.log(sumOfArray([1, 2, 3, 4, 5]));
