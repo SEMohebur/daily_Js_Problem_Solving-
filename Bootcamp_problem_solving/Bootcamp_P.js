@@ -201,11 +201,24 @@
 
 // console.log(findMaxValue([3, 1, 7, 2, 9]));
 
-// Remove Duplicates from Array 13===================================================
+// // Remove Duplicates from Array 13===================================================
+// //Easy way
+
+// const removeDublicateNum = (arr) => {
+//   const res = new Set(arr);
+//   return Array.from(res);
+// };
+
+// console.log(removeDublicateNum([1, 2, 2, 3, 3, 4]));
 
 const removeDublicateNum = (arr) => {
-  const res = new Set(arr);
-  return Array.from(res);
-};
+  const resArr = [];
 
+  for (let item of arr) {
+    if (!resArr.includes(item)) {
+      resArr.push(item);
+    }
+  }
+  return resArr;
+};
 console.log(removeDublicateNum([1, 2, 2, 3, 3, 4]));
