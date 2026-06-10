@@ -177,13 +177,26 @@
 // console.log(sumOfArray([1, 2, 3, 4, 5]));
 
 // // //try to deffrent way
+// const sumOfArray = (arr) => {
+//   let result = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     result += arr[i];
+//   }
+//   return result;
+// };
 
-const sumOfArray = (arr) => {
-  let result = 0;
-  for (let i = 0; i < arr.length; i++) {
-    result += arr[i];
-  }
-  return result;
+// console.log(sumOfArray([1, 2, 3, 4, 5]));
+
+// Find Maximum Value in Array 12===================================================
+const findMaxValue = (arr) => {
+  let maxNum = 0;
+
+  arr.forEach((element) => {
+    if (maxNum < element) {
+      maxNum = element;
+    }
+  });
+  return maxNum;
 };
 
-console.log(sumOfArray([1, 2, 3, 4, 5]));
+console.log(findMaxValue([3, 1, 7, 2, 9]));
