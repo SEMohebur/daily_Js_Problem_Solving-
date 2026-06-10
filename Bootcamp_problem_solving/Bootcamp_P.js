@@ -80,7 +80,7 @@
 
 /////////// Day 2//////////////////////////////////////////////////////
 
-// Reverse a String  6=====================================
+// // Reverse a String  6=====================================
 
 // const reverseString = (str) => {
 //   const strArr = str.split("").reverse().join("");
@@ -94,7 +94,7 @@
 // const countVowels = (str) => {
 //   let counter = 0;
 //   const vowels = ["a", "e", "i", "o", "u"];
-//   for (let i = 0; i < str.length; i++) {
+//   for (let i = 0; i <= str.length; i++) {
 //     if (vowels.includes(str[i].toLowerCase())) {
 //       counter++;
 //     }
@@ -120,7 +120,7 @@
 //   }
 // };
 
-// console.log(isPelindrome("121"));
+// console.log(isPelindrome("010"));
 
 // // Capitalize First Letter of Each Word 9==================================
 // const capitalizeFirstLetter = (param) => {
@@ -135,32 +135,42 @@
 //   return arr.join(" ");
 // };
 
-// console.log(capitalizeFirstLetter("hello worldddd"));
+// console.log(capitalizeFirstLetter("hello worldddd ahdjsd ushdusd"));
 
-// Count Occurrences of a Character 10==================================
+// // Count Occurrences of a Character 10==================================
 
-const countOccurrencesofCharacter = (param) => {
-  let count = 0;
-  let word = "";
-  const obj = {};
+// const countOccurrencesofCharacter = (param) => {
+//   let count = 0;
+//   let word = "";
+//   const obj = {};
 
-  const arr = Array.from(param);
+//   const arr = Array.from(param);
 
-  for (let i = 0; i < arr.length; i++) {
-    if (!obj[arr[i]]) {
-      obj[arr[i]] = 1;
-    } else {
-      obj[arr[i]] = obj[arr[i]] + 1;
-    }
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!obj[arr[i]]) {
+//       obj[arr[i]] = 1;
+//     } else {
+//       obj[arr[i]] = obj[arr[i]] + 1;
+//     }
+//   }
 
-  for (let num in obj) {
-    if (count < obj[num]) {
-      count = obj[num];
-      word = num;
-    }
-  }
-  return { word, count };
+//   for (let num in obj) {
+//     if (count < obj[num]) {
+//       count = obj[num];
+//       word = num;
+//     }
+//   }
+//   return { word, count };
+// };
+
+// console.log(countOccurrencesofCharacter("banana"));
+
+////////////////////////Day 3 ////////////////////////////////////////
+
+// Find the Sum of an Array 11=============================================
+
+const sumOfArray = (arr) => {
+  return (res = arr.reduce((sum, item) => (sum += item)));
 };
 
-console.log(countOccurrencesofCharacter("banana"));
+console.log(sumOfArray([1, 2, 3, 4, 5]));
