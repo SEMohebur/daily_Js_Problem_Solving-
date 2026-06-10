@@ -187,16 +187,25 @@
 
 // console.log(sumOfArray([1, 2, 3, 4, 5]));
 
-// Find Maximum Value in Array 12===================================================
-const findMaxValue = (arr) => {
-  let maxNum = 0;
+// // Find Maximum Value in Array 12===================================================
+// const findMaxValue = (arr) => {
+//   let maxNum = 0;
 
-  arr.forEach((element) => {
-    if (maxNum < element) {
-      maxNum = element;
-    }
-  });
-  return maxNum;
+//   arr.forEach((element) => {
+//     if (maxNum < element) {
+//       maxNum = element;
+//     }
+//   });
+//   return maxNum;
+// };
+
+// console.log(findMaxValue([3, 1, 7, 2, 9]));
+
+// Remove Duplicates from Array 13===================================================
+
+const removeDublicateNum = (arr) => {
+  const res = new Set(arr);
+  return Array.from(res);
 };
 
-console.log(findMaxValue([3, 1, 7, 2, 9]));
+console.log(removeDublicateNum([1, 2, 2, 3, 3, 4]));
