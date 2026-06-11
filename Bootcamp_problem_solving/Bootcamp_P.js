@@ -246,18 +246,35 @@
 
 ////////////////////////////////////// Day 4/////////////////////////////////////
 
-// Count Object Properties 16=============================================
+// // Count Object Properties 16=============================================
 
-const obj = { a: 1, b: 2, c: 3 };
+// const obj = { a: 1, b: 2, c: 3 };
 
-const countObjectProparty = (peram) => {
-  let count = 0;
-  for (let item in peram) {
-    if (item) {
-      count++;
+// const countObjectProparty = (peram) => {
+//   let count = 0;
+//   for (let item in peram) {
+//     if (item) {
+//       count++;
+//     }
+//   }
+//   return count;
+// };
+
+// console.log(countObjectProparty(obj));
+
+// Merge Two Objects  17 ===================================================
+
+const obj1 = { a: 1, u: 3 };
+const obj2 = { b: 2, h: 2, i: 0 };
+
+const margeMultipleObj = (...param) => {
+  const margeObj = {};
+  for (let obj of param) {
+    for (objKey in obj) {
+      margeObj[objKey] = obj[objKey];
     }
   }
-  return count;
+  return margeObj;
 };
 
-console.log(countObjectProparty(obj));
+console.log(margeMultipleObj(obj1, obj2));
