@@ -295,18 +295,55 @@
 
 // fizzBuzz(15);
 
-//  Invert an Object   19 ============================================================================
-// Description: Write a function invertObject(obj) that swaps the keys and values of an object. Input: {a: 1, b: 2}  → Output: {1: 'a', 2: 'b'}
+// //  Invert an Object   19 ============================================================================
+// // Description: Write a function invertObject(obj) that swaps the keys and values of an object. Input: {a: 1, b: 2}  → Output: {1: 'a', 2: 'b'}
 
-const obj = { a: 1, b: 2 };
+// const obj = { a: 1, b: 2 };
 
-function objSwapping(obj) {
+// function objSwapping(obj) {
+//   const resObj = {};
+
+//   for (key in obj) {
+//     resObj[obj[key]] = key;
+//   }
+//   return resObj;
+// }
+
+// console.log(objSwapping(obj));
+
+// Find Duplicate Values in Array of Objects  20================================================================
+//  Given an array of objects, write a function findDuplicateNames(arr) that returns names that appear more than once
+
+function FindDuplicateValuesinArrayOfObjects(arr) {
+  const result = [];
+  let counter = 0;
   const resObj = {};
-
-  for (key in obj) {
-    resObj[obj[key]] = key;
+  for (let item of arr) {
+    for (key in item) {
+      //   console.log(item[key]);
+      if (!resObj[item[key]]) {
+        resObj[item[key]] = 1;
+      } else {
+        resObj[item[key]] = resObj[item[key]] + 1;
+      }
+    }
   }
-  return resObj;
+  //   console.log(resObj);
+
+  for (key in resObj) {
+    if (counter < resObj[key]) {
+      counter = resObj[key];
+      result.push(key);
+    }
+  }
+
+  return result;
 }
 
-console.log(objSwapping(obj));
+console.log(
+  FindDuplicateValuesinArrayOfObjects([
+    { name: "Ali" },
+    { name: "Sara" },
+    { name: "Ali" },
+  ]),
+);
