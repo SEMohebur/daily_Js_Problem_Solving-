@@ -233,13 +233,31 @@
 
 // console.log(NestedToFlatArray([1, [2, [5, [93, 33], 4], 3], [4, 5]]));
 
-// Chunk an Array  15=======================================================
-const chunkArr = (arr, condition) => {
-  const res = [];
-  for (let i = 0; i < arr.length; i += condition) {
-    res.push(arr.slice(i, i + condition));
+// // Chunk an Array  15=======================================================
+// const chunkArr = (arr, condition) => {
+//   const res = [];
+//   for (let i = 0; i < arr.length; i += condition) {
+//     res.push(arr.slice(i, i + condition));
+//   }
+//   return res;
+// };
+
+// console.log(chunkArr([1, 2, 3, 4, 5], 2));
+
+////////////////////////////////////// Day 4/////////////////////////////////////
+
+// Count Object Properties 16=============================================
+
+const obj = { a: 1, b: 2, c: 3 };
+
+const countObjectProparty = (peram) => {
+  let count = 0;
+  for (let item in peram) {
+    if (item) {
+      count++;
+    }
   }
-  return res;
+  return count;
 };
 
-console.log(chunkArr([1, 2, 3, 4, 5], 2));
+console.log(countObjectProparty(obj));
