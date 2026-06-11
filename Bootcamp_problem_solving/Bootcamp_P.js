@@ -262,19 +262,35 @@
 
 // console.log(countObjectProparty(obj));
 
-// Merge Two Objects  17 ===================================================
+// // Merge Two Objects  17 ===================================================
 
-const obj1 = { a: 1, u: 3 };
-const obj2 = { b: 2, h: 2, i: 0 };
+// const obj1 = { a: 1, u: 3 };
+// const obj2 = { b: 2, h: 2, i: 0 };
 
-const margeMultipleObj = (...param) => {
-  const margeObj = {};
-  for (let obj of param) {
-    for (objKey in obj) {
-      margeObj[objKey] = obj[objKey];
+// const margeMultipleObj = (...param) => {
+//   const margeObj = {};
+//   for (let obj of param) {
+//     for (objKey in obj) {
+//       margeObj[objKey] = obj[objKey];
+//     }
+//   }
+//   return margeObj;
+// };
+
+// console.log(margeMultipleObj(obj1, obj2));
+
+// find  FizzBuzz  18 ========================================================
+
+const fizzBuzz = (n) => {
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 === 0) {
+      console.log(`${i} Fizz`);
+    } else if (i % 5 === 0) {
+      console.log(`${i} Buzz`);
+    } else {
+      console.log(`${i}`);
     }
   }
-  return margeObj;
 };
 
-console.log(margeMultipleObj(obj1, obj2));
+fizzBuzz(15);
