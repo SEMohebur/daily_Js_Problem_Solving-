@@ -279,18 +279,34 @@
 
 // console.log(margeMultipleObj(obj1, obj2));
 
-// find  FizzBuzz  18 ========================================================
+// // find  FizzBuzz  18 ========================================================
 
-const fizzBuzz = (n) => {
-  for (let i = 1; i <= n; i++) {
-    if (i % 3 === 0) {
-      console.log(`${i} Fizz`);
-    } else if (i % 5 === 0) {
-      console.log(`${i} Buzz`);
-    } else {
-      console.log(`${i}`);
-    }
+// const fizzBuzz = (n) => {
+//   for (let i = 1; i <= n; i++) {
+//     if (i % 3 === 0) {
+//       console.log(`${i} Fizz`);
+//     } else if (i % 5 === 0) {
+//       console.log(`${i} Buzz`);
+//     } else {
+//       console.log(`${i}`);
+//     }
+//   }
+// };
+
+// fizzBuzz(15);
+
+//  Invert an Object   19 ============================================================================
+// Description: Write a function invertObject(obj) that swaps the keys and values of an object. Input: {a: 1, b: 2}  → Output: {1: 'a', 2: 'b'}
+
+const obj = { a: 1, b: 2 };
+
+function objSwapping(obj) {
+  const resObj = {};
+
+  for (key in obj) {
+    resObj[obj[key]] = key;
   }
-};
+  return resObj;
+}
 
-fizzBuzz(15);
+console.log(objSwapping(obj));
