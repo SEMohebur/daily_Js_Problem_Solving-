@@ -350,7 +350,7 @@
 
 /////////////////.  Day 5. /////////////////////////////////Day 5///////////////////////////////////
 
-// //  Factorial (Recursive)  21 ==================================================================
+// //  Factorial (Recursive)  21 ================================================================== ok
 // // Description: Write a recursive function factorial(n) that returns the factorial of a non-negative integer n.
 // // Example:
 // // Input: 5  → Output: 120 (5×4×3×2×1)Input: 0  → Output: 1
@@ -368,44 +368,49 @@
 
 // console.log(factorial(5));
 
-//  // Fibonacci Sequence  22 ====================================================
+//  // Fibonacci Sequence  22 ==================================================== not ok
 //   //Description: Write a function fibonacci(n) that returns the nth number in the Fibonacci sequence.
 //  // Example:
 //   //Input: 6  → Output: 8 (0,1,1,2,3,5,8...)
 //   //Hint: Try both iterative and recursive approaches.
 
-// //Create a Counter with Closure   23 ====================================================
+const fibonacciSequence = (n) => {
+  let first = 0;
+  let second = 1;
+
+  for (let i = 2; i <= n; i++) {
+    const next = first + second;
+    first = second;
+    second = next;
+  }
+  return second;
+};
+
+console.log(fibonacciSequence(6));
+
+// //Create a Counter with Closure   23 ==================================================== ok
 // //Description: Write a function makeCounter() that returns an object with increment, decrement, and getCount methods using closure.
 // //Example:
 // //const c = makeCounter();c.increment(); c.increment();c.getCount(); // 2
 // //Hint: Use a variable inside the outer function that inner functions can access.
 
-function makeCounter() {
-  let counter = 0;
-  function increment() {
-    return counter++;
-  }
+// function makeCounter() {
+//   let counter = 0;
 
-  function decrement() {
-    return counter--;
-  }
+//   function increment() {
+//     return counter++;
+//   }
 
-  function getCount() {
-    return counter;
-  }
+//   function decrement() {
+//     return counter--;
+//   }
 
-  return { increment, decrement, getCount };
-}
+//   function getCount() {
+//     return counter;
+//   }
 
-const c = makeCounter();
-console.log(c.increment());
-console.log(c.increment());
-console.log(c.increment());
-console.log(c.decrement());
-console.log(c.decrement());
-console.log(c.getCount());
+//   return { increment, decrement, getCount };
+// }
 
-console.log(c.getCount());
-console.log(c.getCount());
-console.log(c.increment());
-console.log(c.increment());
+// const c = makeCounter();
+// console.log(c.increment());
