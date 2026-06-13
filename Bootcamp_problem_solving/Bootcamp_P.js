@@ -356,12 +356,56 @@
 // // Input: 5  → Output: 120 (5×4×3×2×1)Input: 0  → Output: 1
 // // Hint: Base case: factorial(0) = 1. Recursive case: n * factorial(n-1).
 
-const factorial = (n) => {
-  if (n === 0) {
-    return 1;
-  } else {
-    return factorial(n - 1) * n;
-  }
-};
+// //ei problem ta jeheto noton system mane recursion seheto ai er help niye full concept ta boje nilam
 
-console.log(factorial(5));
+// const factorial = (n) => {
+//   if (n === 0) {
+//     return 1;
+//   } else {
+//     return factorial(n - 1) * n;
+//   }
+// };
+
+// console.log(factorial(5));
+
+//  // Fibonacci Sequence  22 ====================================================
+//   //Description: Write a function fibonacci(n) that returns the nth number in the Fibonacci sequence.
+//  // Example:
+//   //Input: 6  → Output: 8 (0,1,1,2,3,5,8...)
+//   //Hint: Try both iterative and recursive approaches.
+
+// //Create a Counter with Closure   23 ====================================================
+// //Description: Write a function makeCounter() that returns an object with increment, decrement, and getCount methods using closure.
+// //Example:
+// //const c = makeCounter();c.increment(); c.increment();c.getCount(); // 2
+// //Hint: Use a variable inside the outer function that inner functions can access.
+
+function makeCounter() {
+  let counter = 0;
+  function increment() {
+    return counter++;
+  }
+
+  function decrement() {
+    return counter--;
+  }
+
+  function getCount() {
+    return counter;
+  }
+
+  return { increment, decrement, getCount };
+}
+
+const c = makeCounter();
+console.log(c.increment());
+console.log(c.increment());
+console.log(c.increment());
+console.log(c.decrement());
+console.log(c.decrement());
+console.log(c.getCount());
+
+console.log(c.getCount());
+console.log(c.getCount());
+console.log(c.increment());
+console.log(c.increment());
