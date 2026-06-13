@@ -368,25 +368,25 @@
 
 // console.log(factorial(5));
 
-//  // Fibonacci Sequence  22 ==================================================== not ok
+//  // Fibonacci Sequence  22 ====================================================  ok
 //   //Description: Write a function fibonacci(n) that returns the nth number in the Fibonacci sequence.
 //  // Example:
 //   //Input: 6  → Output: 8 (0,1,1,2,3,5,8...)
 //   //Hint: Try both iterative and recursive approaches.
 
-const fibonacciSequence = (n) => {
-  let first = 0;
-  let second = 1;
+// const fibonacciSequence = (n) => {
+//   let first = 0;
+//   let second = 1;
 
-  for (let i = 2; i <= n; i++) {
-    const next = first + second;
-    first = second;
-    second = next;
-  }
-  return second;
-};
+//   for (let i = 2; i <= n; i++) {
+//     const next = first + second;
+//     first = second;
+//     second = next;
+//   }
+//   return second;
+// };
 
-console.log(fibonacciSequence(6));
+// console.log(fibonacciSequence(6));
 
 // //Create a Counter with Closure   23 ==================================================== ok
 // //Description: Write a function makeCounter() that returns an object with increment, decrement, and getCount methods using closure.
@@ -414,3 +414,19 @@ console.log(fibonacciSequence(6));
 
 // const c = makeCounter();
 // console.log(c.increment());
+
+// // Curry a Function 24======================================================
+// //Description: Write a function curry(fn) that converts a function of two arguments into a curried version.
+// //Example:
+// //const add = curry((a,b) => a+b);add(2)(3); // 5
+// //Hint: Return a function from inside a function.
+
+const curry = (fn) => {
+  return function (a) {
+    return function (b) {
+      return fn(a, b);
+    };
+  };
+};
+const add = curry((a, b) => a + b);
+console.log(add(2)(3));
