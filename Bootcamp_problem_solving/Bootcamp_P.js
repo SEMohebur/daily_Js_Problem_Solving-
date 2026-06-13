@@ -421,12 +421,37 @@
 // //const add = curry((a,b) => a+b);add(2)(3); // 5
 // //Hint: Return a function from inside a function.
 
-const curry = (fn) => {
-  return function (a) {
-    return function (b) {
-      return fn(a, b);
-    };
+// const curry = (fn) => {
+//   return function (a) {
+//     return function (b) {
+//       return fn(a, b);
+//     };
+//   };
+// };
+// const add = curry((a, b) => a + b);
+// console.log(add(2)(3));
+
+//  // Memoize a Function  25==============================================
+// // Description: Write a function memoize(fn) that caches the results of a function so repeated calls with the same input return the cached result.
+// // Example:
+// ///const memoAdd = memoize(n => n + 10);memoAdd(5); // 15 (computed)memoAdd(5); // 15 (from cache)
+// //Hint: Use an object as a cache inside the outer function.
+
+const memoize = (fn) => {
+  const cache = {};
+
+  return function (input) {
+    if (input in cache) {
+      return cache[input];
+    }
+
+    const result = fn(input);
+    cache[input] = result;
+    return result;
   };
 };
-const add = curry((a, b) => a + b);
-console.log(add(2)(3));
+
+const memoAdd = memoize((n) => n + 10);
+
+console.log(memoAdd(5));
+console.log(memoAdd(5));
