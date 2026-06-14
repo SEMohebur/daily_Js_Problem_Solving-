@@ -437,21 +437,32 @@
 // ///const memoAdd = memoize(n => n + 10);memoAdd(5); // 15 (computed)memoAdd(5); // 15 (from cache)
 // //Hint: Use an object as a cache inside the outer function.
 
-const memoize = (fn) => {
-  const cache = {};
+// const memoize = (fn) => {
+//   const cache = {};
 
-  return function (input) {
-    if (input in cache) {
-      return cache[input];
-    }
+//   return function (input) {
+//     if (input in cache) {
+//       return cache[input];
+//     }
 
-    const result = fn(input);
-    cache[input] = result;
-    return result;
-  };
-};
+//     const result = fn(input);
+//     cache[input] = result;
+//     return result;
+//   };
+// };
 
-const memoAdd = memoize((n) => n + 10);
+// const memoAdd = memoize((n) => n + 10);
 
-console.log(memoAdd(5));
-console.log(memoAdd(5));
+// console.log(memoAdd(5));
+// console.log(memoAdd(5));
+
+// //  Destructure and Rename   26
+//  //Description: Given a user object, use destructuring to extract firstName, lastName, and age, renaming firstName to name.
+//  //Example:
+//  //const user = {firstName:'Sara', lastName:'Khan', age:25};
+//  //Hint: Use: const { firstName: name, lastName, age } = user;
+
+const user = { firstName: "Sara", lastName: "Khan", age: 25 };
+
+const { firstName: name, lastName, age } = user;
+console.log(name, lastName, age);
