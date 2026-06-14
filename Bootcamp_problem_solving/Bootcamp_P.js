@@ -456,13 +456,28 @@
 // console.log(memoAdd(5));
 // console.log(memoAdd(5));
 
-// //  Destructure and Rename   26
+///////////////////// Day 6//////////////////////////////////
+
+// //  Destructure and Rename   26====================================================
 //  //Description: Given a user object, use destructuring to extract firstName, lastName, and age, renaming firstName to name.
 //  //Example:
 //  //const user = {firstName:'Sara', lastName:'Khan', age:25};
 //  //Hint: Use: const { firstName: name, lastName, age } = user;
 
-const user = { firstName: "Sara", lastName: "Khan", age: 25 };
+// const user = { firstName: "Sara", lastName: "Khan", age: 25 };
 
-const { firstName: name, lastName, age } = user;
-console.log(name, lastName, age);
+// const { firstName: name, lastName, age } = user;
+// console.log(name, lastName, age);
+
+// //  Merge Arrays with Spread 27=======================================================
+// //Description: Write a function mergeArrays(...arrays) that accepts any number of arrays and merges them into one using the spread operator.
+// // Example:
+//  //Input: [1,2], [3,4], [5]Output: [1,2,3,4,5]
+//  //Hint: Use rest parameters and spread inside reduce or flat.
+
+const multipleArrayTo1Array = (...param) => {
+  const flatArr = param.flat(param.length - 1);
+  return flatArr;
+};
+
+console.log(multipleArrayTo1Array([1, 2], [3, 4], [5]));
