@@ -488,6 +488,8 @@
 // //delay(1000).then(() => { console.log('1 sec'); return delay(2000); }).then(() => console.log('3 sec total'));
 // //Hint: Use new Promise with setTimeout inside.
 
+// // way 1
+
 // const promiseChain = async () => {
 //   const res1 = await setTimeout(() => {
 //     console.log("1 sec");
@@ -499,6 +501,8 @@
 // };
 
 // promiseChain();
+
+// // way 2
 
 // new Promise((resolve) => {
 //   resolve("Hello");
@@ -514,15 +518,41 @@
 //     }, 2000);
 //   });
 
-function delay(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
+// // way 3
 
-delay(1000).then(() => {
-  console.log("1 sec");
-  return delay(2000).then(() => {
-    console.log("2 sec");
+// function delay(ms) {
+//   return new Promise((resolve) => {
+//     setTimeout(resolve, ms);
+//   });
+// }
+
+// delay(1000).then(() => {
+//   console.log("1 sec");
+//   return delay(2000).then(() => {
+//     console.log("2 sec");
+//   });
+// });
+
+// //  Async/Await Fetch Simulation  29===========================================================
+// //Description: Write an async function getUserData(id) that simulates fetching user data by awaiting a Promise that resolves after 500ms with a mock user object.
+// // Example:
+// // await getUserData(1);// returns {id:1, name:'Test User'}
+// // Hint: Use async/await with a Promise that wraps setTimeout.
+
+const mockData = [
+  { id: 1, name: "Test User" },
+  { id: 2, name: "maisa" },
+  { id: 3, name: "labib" },
+];
+
+const getUserData = async (id) => {
+  const user = await new Promise((resolve) => {
+    setTimeout(() => {
+      const data = mockData.find((item) => item.id === id);
+      resolve(data);
+    }, 500);
   });
-});
+  return user;
+};
+
+getUserData(2).then((data) => console.log(data));
