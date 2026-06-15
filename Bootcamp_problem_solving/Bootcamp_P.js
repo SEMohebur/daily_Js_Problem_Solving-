@@ -563,15 +563,29 @@
 //  //const user = {profile: null};const city = user?.profile?.address?.city ?? 'Unknown';// Output: 'Unknown'
 // // Hint: Chain ?. for each level; use ?? for the fallback.
 
-const user = {
-  id: 1,
-  name: "Mohibur",
-  profile: {
-    contact: {
-      email: "mohibur@gmail.com",
-      // phone: "023898989",
-    },
-  },
+// const user = {
+//   id: 1,
+//   name: "Mohibur",
+//   profile: {
+//     contact: {
+//       email: "mohibur@gmail.com",
+//       // phone: "023898989",
+//     },
+//   },
+// };
+
+// console.log(user?.profile?.contact?.phone ?? "Phone number not found");
+
+////////////////////////////////////////Day 7///////////////////////////////////////
+
+const debounceFunc = (fn, delay) => {
+  setTimeout(() => {
+    fn();
+  }, delay);
 };
 
-console.log(user?.profile?.contact?.phone ?? "Phone number not found");
+const fn = () => {
+  return console.log("fnsd");
+};
+
+const debouncedSearch = debounceFunc(fn, 300);
