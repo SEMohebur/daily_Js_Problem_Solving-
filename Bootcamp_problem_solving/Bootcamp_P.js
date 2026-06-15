@@ -557,7 +557,7 @@
 
 // getUserData(2).then((data) => console.log(data));
 
-//  // Optional Chaining & Nullish Coalescing 30
+//  // Optional Chaining & Nullish Coalescing 30 ===========================================
 // // Description: Given a nested object that may have missing properties, safely access a deeply nested value using optional chaining (?.) and provide a default using nullish coalescing (??).
 // // Example:
 //  //const user = {profile: null};const city = user?.profile?.address?.city ?? 'Unknown';// Output: 'Unknown'
@@ -568,7 +568,7 @@ const user = {
   name: "Mohibur",
   profile: {
     contact: {
-      email: "mohibur@example.com",
+      email: "mohibur@gmail.com",
       // phone: "023898989",
     },
   },
