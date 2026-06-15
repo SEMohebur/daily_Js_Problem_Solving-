@@ -578,14 +578,39 @@
 
 ////////////////////////////////////////Day 7///////////////////////////////////////
 
-const debounceFunc = (fn, delay) => {
-  setTimeout(() => {
-    fn();
-  }, delay);
+// // Debounce Function 31=================================================
+//  //Description: Write a debounce(fn, delay) function that delays invoking fn until after delay milliseconds have elapsed since the last time it was called.
+// //Example:
+// //const debouncedSearch = debounce(search, 300);// Fires only once after user stops typing for 300ms
+// //Hint: Use clearTimeout and setTimeout.
+
+// const debounceFunc = (fn, delay) => {
+//   setTimeout(() => {
+//     fn();
+//   }, delay);
+// };
+
+// const fn = () => {
+//   return console.log("fnsd");
+// };
+
+// const debouncedSearch = debounceFunc(fn, 300);
+
+// // Implement Array.prototype.map from Scratch 35=======================================
+// // Description: Write a function myMap(arr, callback) that replicates the behavior of Array.prototype.map without using the built-in map().
+//  //Example:
+// // myMap([1,2,3], x => x * 2);// Output: [2, 4, 6]
+// // Hint: Loop through the array, apply the callback to each element, push results to a new array.
+
+const myMap = (arr, fn) => {
+  const resArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    resArr.push(fn(arr[i]));
+  }
+  return resArr;
 };
 
-const fn = () => {
-  return console.log("fnsd");
-};
+const arr = [1, 2, 3];
 
-const debouncedSearch = debounceFunc(fn, 300);
+console.log(myMap(arr, (x) => x * 2));
