@@ -475,9 +475,54 @@
 //  //Input: [1,2], [3,4], [5]Output: [1,2,3,4,5]
 //  //Hint: Use rest parameters and spread inside reduce or flat.
 
-const multipleArrayTo1Array = (...param) => {
-  const flatArr = param.flat(param.length - 1);
-  return flatArr;
-};
+// const multipleArrayTo1Array = (...param) => {
+//   const flatArr = param.flat(param.length - 1);
+//   return flatArr;
+// };
 
-console.log(multipleArrayTo1Array([1, 2], [3, 4], [5]));
+// console.log(multipleArrayTo1Array([1, 2], [3, 4], [5]));
+
+// //  Promise Chain  28 =====================================================================
+// //Description: Write a function delay(ms) that returns a Promise that resolves after ms milliseconds. Then chain two delays: first 1 second, then 2 seconds, logging a message after each.
+// //Example:
+// //delay(1000).then(() => { console.log('1 sec'); return delay(2000); }).then(() => console.log('3 sec total'));
+// //Hint: Use new Promise with setTimeout inside.
+
+// const promiseChain = async () => {
+//   const res1 = await setTimeout(() => {
+//     console.log("1 sec");
+//   }, 1000);
+
+//   const res2 = await setTimeout(() => {
+//     console.log("2 sec");
+//   }, 2000);
+// };
+
+// promiseChain();
+
+// new Promise((resolve) => {
+//   resolve("Hello");
+// })
+//   .then((data) => {
+//     setTimeout(() => {
+//       console.log("1 sec");
+//     }, 1000);
+//   })
+//   .then(() => {
+//     setTimeout(() => {
+//       console.log("2 sec");
+//     }, 2000);
+//   });
+
+function delay(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
+delay(1000).then(() => {
+  console.log("1 sec");
+  return delay(2000).then(() => {
+    console.log("2 sec");
+  });
+});
