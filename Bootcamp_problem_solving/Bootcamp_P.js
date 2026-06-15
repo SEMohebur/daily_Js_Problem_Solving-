@@ -539,20 +539,39 @@
 // // await getUserData(1);// returns {id:1, name:'Test User'}
 // // Hint: Use async/await with a Promise that wraps setTimeout.
 
-const mockData = [
-  { id: 1, name: "Test User" },
-  { id: 2, name: "maisa" },
-  { id: 3, name: "labib" },
-];
+// const mockData = [
+//   { id: 1, name: "Test User" },
+//   { id: 2, name: "maisa" },
+//   { id: 3, name: "labib" },
+// ];
 
-const getUserData = async (id) => {
-  const user = await new Promise((resolve) => {
-    setTimeout(() => {
-      const data = mockData.find((item) => item.id === id);
-      resolve(data);
-    }, 500);
-  });
-  return user;
+// const getUserData = async (id) => {
+//   const user = await new Promise((resolve) => {
+//     setTimeout(() => {
+//       const data = mockData.find((item) => item.id === id);
+//       resolve(data);
+//     }, 500);
+//   });
+//   return user;
+// };
+
+// getUserData(2).then((data) => console.log(data));
+
+//  // Optional Chaining & Nullish Coalescing 30
+// // Description: Given a nested object that may have missing properties, safely access a deeply nested value using optional chaining (?.) and provide a default using nullish coalescing (??).
+// // Example:
+//  //const user = {profile: null};const city = user?.profile?.address?.city ?? 'Unknown';// Output: 'Unknown'
+// // Hint: Chain ?. for each level; use ?? for the fallback.
+
+const user = {
+  id: 1,
+  name: "Mohibur",
+  profile: {
+    contact: {
+      email: "mohibur@example.com",
+      // phone: "023898989",
+    },
+  },
 };
 
-getUserData(2).then((data) => console.log(data));
+console.log(user?.profile?.contact?.phone ?? "Phone number not found");
