@@ -602,15 +602,63 @@
 // // myMap([1,2,3], x => x * 2);// Output: [2, 4, 6]
 // // Hint: Loop through the array, apply the callback to each element, push results to a new array.
 
-const myMap = (arr, fn) => {
-  const resArr = [];
+// const myMap = (arr, fn) => {
+//   const resArr = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    resArr.push(fn(arr[i]));
-  }
-  return resArr;
+//   for (let i = 0; i < arr.length; i++) {
+//     resArr.push(fn(arr[i]));
+//   }
+//   return resArr;
+// };
+
+// const arr = [1, 2, 3];
+
+// console.log(myMap(arr, (x) => x * 2));
+
+////////////////////////////////////////Day 8///////////////////////////////////////
+
+// // Safe JSON Parse 36=====================================================
+// /// Description: Write a function safeJsonParse(str) that tries to parse a JSON string and returns the parsed value, or null if parsing fails — without throwing an error.
+// //Example:
+// //safeJsonParse('{"a":1}');  // {a: 1}safeJsonParse('bad json'); // null
+// //Hint: Use try/catch inside the function.
+
+// const safeJsonParse = (param) => {
+//   try {
+//     const res = JSON.parse(param);
+//     return res;
+//   } catch (error) {
+//     return null;
+//   }
+// };
+
+// console.log(safeJsonParse('{"a":1}'));
+
+// //  Retry a Promise 37===================================================
+// // Description: Write a function retry(fn, times) that calls an async function fn up to times times, retrying if it throws an error. Resolves on first success, rejects after all attempts fail.
+// // Example:
+// // await retry(unstableFetch, 3);// Tries up to 3 times before failing
+//  //Hint: Use a loop with try/catch; only throw after all retries are exhausted.
+
+const unstableFetch = async () => {
+  const result = true;
+  let res = await result;
+  return res;
 };
 
-const arr = [1, 2, 3];
+const retry = async (unstableFetch, time) => {
+  let lastErr;
+  for (let i = 0; i < time; i++) {
+    try {
+      const res = await unstableFetch();
+      return res;
+    } catch (error) {
+      lastErr = error;
+    }
+  }
+  throw lastErr;
+};
 
-console.log(myMap(arr, (x) => x * 2));
+retry(unstableFetch, 3)
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err.message));
