@@ -671,15 +671,36 @@
 // //  Input: [2, 7, 11, 15], target = 9Output: [0, 1]  (because 2 + 7 = 9)
 // // Hint: Use a hash map to store visited values and their indices.
 
-const towSum = (arr, target) => {
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] + arr[j] == target) {
-        return [arr.indexOf(arr[i]), arr.indexOf(arr[j])];
-      }
-    }
+// const towSum = (arr, target) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (arr[i] + arr[j] == target) {
+//         return [arr.indexOf(arr[i]), arr.indexOf(arr[j])];
+//       }
+//     }
+//   }
+//   return "not found";
+// };
+
+// console.log(towSum([2, 7, 11, 15], 17));
+
+// //Check Anagram  42====================================================
+// //Description: Write a function isAnagram(str1, str2) that returns true if the two strings are anagrams of each other.
+// //Example:
+// //Input: 'listen', 'silent'  → Output: trueInput: 'hello', 'world'   → Output: false
+// //Hint: Sort both strings and compare, or use a character frequency map.
+
+// //1Way ==
+
+const checkAnagrum = (str1, str2) => {
+  const sortStr1 = str1.split("").sort().join("");
+  const sortStr2 = str2.split("").sort().join("");
+
+  if (sortStr1 === sortStr2) {
+    return true;
+  } else {
+    return false;
   }
-  return "not found";
 };
 
-console.log(towSum([2, 7, 11, 15], 17));
+console.log(checkAnagrum("listen", "silent"));
