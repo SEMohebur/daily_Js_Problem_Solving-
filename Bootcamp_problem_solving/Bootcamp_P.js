@@ -640,25 +640,46 @@
 // // await retry(unstableFetch, 3);// Tries up to 3 times before failing
 //  //Hint: Use a loop with try/catch; only throw after all retries are exhausted.
 
-const unstableFetch = async () => {
-  const result = true;
-  let res = await result;
-  return res;
-};
+// const unstableFetch = async () => {
+//   const result = true;
+//   let res = await result;
+//   return res;
+// };
 
-const retry = async (unstableFetch, time) => {
-  let lastErr;
-  for (let i = 0; i < time; i++) {
-    try {
-      const res = await unstableFetch();
-      return res;
-    } catch (error) {
-      lastErr = error;
+// const retry = async (unstableFetch, time) => {
+//   let lastErr;
+//   for (let i = 0; i < time; i++) {
+//     try {
+//       const res = await unstableFetch();
+//       return res;
+//     } catch (error) {
+//       lastErr = error;
+//     }
+//   }
+//   throw lastErr;
+// };
+
+// retry(unstableFetch, 3)
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err.message));
+
+///////////////////////////////////////////// Day 9 /////////////////////////////////////
+
+// // Two Sum   41================================================
+// // Description: Given an array of numbers and a target, write a function twoSum(arr, target) that returns the indices of the two numbers that add up to the target.
+// // Example:
+// //  Input: [2, 7, 11, 15], target = 9Output: [0, 1]  (because 2 + 7 = 9)
+// // Hint: Use a hash map to store visited values and their indices.
+
+const towSum = (arr, target) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] == target) {
+        return [arr.indexOf(arr[i]), arr.indexOf(arr[j])];
+      }
     }
   }
-  throw lastErr;
+  return "not found";
 };
 
-retry(unstableFetch, 3)
-  .then((res) => console.log(res))
-  .catch((err) => console.log(err.message));
+console.log(towSum([2, 7, 11, 15], 17));
