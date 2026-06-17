@@ -690,17 +690,58 @@
 // //Input: 'listen', 'silent'  → Output: trueInput: 'hello', 'world'   → Output: false
 // //Hint: Sort both strings and compare, or use a character frequency map.
 
-// //1Way ==
+// //Way 2==
 
-const checkAnagrum = (str1, str2) => {
-  const sortStr1 = str1.split("").sort().join("");
-  const sortStr2 = str2.split("").sort().join("");
+// const checkAnagrum = (str1, str2) => {
+//   const sortStr1 = str1.split("").sort().join("");
+//   const sortStr2 = str2.split("").sort().join("");
 
-  if (sortStr1 === sortStr2) {
-    return true;
-  } else {
-    return false;
-  }
+//   if (sortStr1 === sortStr2) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// console.log(checkAnagrum("listen", "silent"));
+
+// //way 2==          baki ache //
+// const checkAnagrum = (str1, str2) => {
+//   if (str1.length !== str2.length) {
+//     return false;
+//   }
+
+//   const obj = {};
+
+//   const str1Arr = Array.from(str1);
+//   for (let i = 0; i < str1Arr.length; i++) {
+//     if (!obj[str1Arr[i]]) {
+//       obj[str1Arr[i]] = 1;
+//     } else {
+//       obj[str1Arr[i]] = obj[str1Arr[i]] + 1;
+//     }
+//   }
+//   for (key in obj) {
+//   }
+// };
+
+// checkAnagrum("listen", "silent");
+
+// // Find Missing Number 43===================================================
+// // Description: Given an array of n-1 integers from 1 to n with one number missing, write a function findMissing(arr, n) to find the missing number.
+// //Example:
+// //Input: [1,2,4,5], n=5  → Output: 3
+// //Hint: Use the formula: expected sum = n*(n+1)/2, then subtract actual sum.
+
+const findMissingNum = (arr, n) => {
+  let sum = (n * (n + 1)) / 2;
+
+  const arrSum = arr.reduce((arrSum, i) => {
+    return (arrSum += i);
+  });
+
+  const missingNum = sum - arrSum;
+  console.log(missingNum);
 };
 
-console.log(checkAnagrum("listen", "silent"));
+findMissingNum([1, 2, 4, 5], 5);
