@@ -779,12 +779,26 @@
 // Input: 'The quick brown fox'Output: 'quick'
 // Hint: Split the sentence and use reduce() to track the longest.
 
-const longestWord = (sentence) => {
-  return sentence
-    .split(" ")
-    .reduce((longest, current) =>
-      current.length > longest.length ? current : longest,
-    );
+// const longestWord = (sentence) => {
+//   return sentence
+//     .split(" ")
+//     .reduce((longest, current) =>
+//       current.length > longest.length ? current : longest,
+//     );
+// };
+
+// console.log(longestWord("The quick brown fox"));
+
+const findLongestStr = (str) => {
+  let longestString = "";
+
+  const strArr = str.split(" ");
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i].length > longestString.length) {
+      longestString = strArr[i];
+    }
+  }
+  console.log(longestString);
 };
 
-console.log(longestWord("The quick brown fox"));
+findLongestStr("The quick brown fox");
