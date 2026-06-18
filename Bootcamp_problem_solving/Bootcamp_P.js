@@ -758,17 +758,33 @@
 //  //Input: 'the cat sat on the mat'Output: {the: 2, cat: 1, sat: 1, on: 1, mat: 1}
 // //Hint: Split by spaces, then reduce into a frequency object.
 
-const worCount = (str) => {
-  const obj = {};
-  const strArr = str.split(" ");
-  for (let i = 0; i < strArr.length; i++) {
-    if (!obj[strArr[i]]) {
-      obj[strArr[i]] = 1;
-    } else {
-      obj[strArr[i]] = obj[strArr[i]] + 1;
-    }
-  }
-  return obj;
-};
+// const worCount = (str) => {
+//   const obj = {};
+//   const strArr = str.split(" ");
+//   for (let i = 0; i < strArr.length; i++) {
+//     if (!obj[strArr[i]]) {
+//       obj[strArr[i]] = 1;
+//     } else {
+//       obj[strArr[i]] = obj[strArr[i]] + 1;
+//     }
+//   }
+//   return obj;
+// };
 
-console.log(worCount("the cat sat on the mat"));
+// console.log(worCount("the cat sat on the mat"));
+
+//Longest Word in a Sentence 47=========================================================
+// Description: Write a function longestWord(sentence) that returns the longest word in a sentence. If there's a tie, return the first one.
+// Example:
+// Input: 'The quick brown fox'Output: 'quick'
+// Hint: Split the sentence and use reduce() to track the longest.
+
+function longestWord(sentence) {
+  return sentence
+    .split(" ")
+    .reduce((longest, current) =>
+      current.length > longest.length ? current : longest,
+    );
+}
+
+console.log(longestWord("The quick brown fox"));
