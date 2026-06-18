@@ -753,13 +753,22 @@
 // //Hint: Use a stack (array). Push opening brackets, pop and compare for closing ones.
 
 // // Count Words in a Sentence  46======================================================
-// //Description: Write a function wordCount(sentence) that returns an object with each word as a key and its frequency as the value.
-// //Example:
-// //Input: 'the cat sat on the mat'Output: {the: 2, cat: 1, sat: 1, on: 1, mat: 1}
+// // Description: Write a function wordCount(sentence) that returns an object with each word as a key and its frequency as the value.
+// // Example:
+//  //Input: 'the cat sat on the mat'Output: {the: 2, cat: 1, sat: 1, on: 1, mat: 1}
 // //Hint: Split by spaces, then reduce into a frequency object.
 
 const worCount = (str) => {
-  console.log(str);
+  const obj = {};
+  const strArr = str.split(" ");
+  for (let i = 0; i < strArr.length; i++) {
+    if (!obj[strArr[i]]) {
+      obj[strArr[i]] = 1;
+    } else {
+      obj[strArr[i]] = obj[strArr[i]] + 1;
+    }
+  }
+  return obj;
 };
 
-worCount("the cat sat on the mat");
+console.log(worCount("the cat sat on the mat"));
