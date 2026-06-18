@@ -733,15 +733,33 @@
 // //Input: [1,2,4,5], n=5  → Output: 3
 // //Hint: Use the formula: expected sum = n*(n+1)/2, then subtract actual sum.
 
-const findMissingNum = (arr, n) => {
-  let sum = (n * (n + 1)) / 2;
+// const findMissingNum = (arr, n) => {
+//   let sum = (n * (n + 1)) / 2;
 
-  const arrSum = arr.reduce((arrSum, i) => {
-    return (arrSum += i);
-  });
+//   const arrSum = arr.reduce((arrSum, i) => {
+//     return (arrSum += i);
+//   });
 
-  const missingNum = sum - arrSum;
-  console.log(missingNum);
+//   const missingNum = sum - arrSum;
+//   console.log(missingNum);
+// };
+
+// findMissingNum([1, 2, 4, 5], 5);
+
+// // Valid Parentheses  44 ===================================================================
+// //Description: Write a function isValidParentheses(str) that returns true if the string has valid, balanced parentheses, brackets, and braces.
+// //Example:
+// //Input: '()[]{}'  → Output: trueInput: '([)]'    → Output: false
+// //Hint: Use a stack (array). Push opening brackets, pop and compare for closing ones.
+
+// // Count Words in a Sentence  46======================================================
+// //Description: Write a function wordCount(sentence) that returns an object with each word as a key and its frequency as the value.
+// //Example:
+// //Input: 'the cat sat on the mat'Output: {the: 2, cat: 1, sat: 1, on: 1, mat: 1}
+// //Hint: Split by spaces, then reduce into a frequency object.
+
+const worCount = (str) => {
+  console.log(str);
 };
 
-findMissingNum([1, 2, 4, 5], 5);
+worCount("the cat sat on the mat");
