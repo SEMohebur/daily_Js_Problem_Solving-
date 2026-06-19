@@ -789,16 +789,34 @@
 
 // console.log(longestWord("The quick brown fox"));
 
-const findLongestStr = (str) => {
-  let longestString = "";
+// // way 2
 
-  const strArr = str.split(" ");
-  for (let i = 0; i < strArr.length; i++) {
-    if (strArr[i].length > longestString.length) {
-      longestString = strArr[i];
-    }
-  }
-  console.log(longestString);
+// const findLongestStr = (str) => {
+//   let longestString = "";
+
+//   const strArr = str.split(" ");
+//   for (let i = 0; i < strArr.length; i++) {
+//     if (strArr[i].length > longestString.length) {
+//       longestString = strArr[i];
+//     }
+//   }
+//   console.log(longestString);
+// };
+
+// findLongestStr("The quick brown fox");
+
+// //Rotate an Array  48==========================================
+// // Description: Write a function rotateArray(arr, k) that rotates an array to the right by k steps.
+// //Example:
+// //Input: [1,2,3,4,5], k=2Output: [4,5,1,2,3]
+// //Hint: Use slice and concat, or reverse the whole array then parts.
+
+const rotateArr = (arr, k) => {
+  const n = arr.length;
+  const firstDigits = arr.slice(0, n - k);
+  const lastDigits = arr.splice(n - k);
+  const resArr = lastDigits.concat(firstDigits);
+  return resArr;
 };
 
-findLongestStr("The quick brown fox");
+console.log(rotateArr([1, 2, 3, 4, 5], 2));
