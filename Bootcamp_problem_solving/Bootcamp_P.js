@@ -811,12 +811,12 @@
 // //Input: [1,2,3,4,5], k=2Output: [4,5,1,2,3]
 // //Hint: Use slice and concat, or reverse the whole array then parts.
 
-const rotateArr = (arr, k) => {
-  const n = arr.length;
-  const firstDigits = arr.slice(0, n - k);
-  const lastDigits = arr.splice(n - k);
-  const resArr = lastDigits.concat(firstDigits);
-  return resArr;
-};
+// const rotateArr = (arr, k) => {
+//   const n = arr.length;
+//   const firstDigits = arr.slice(0, n - k);
+//   const lastDigits = arr.splice(n - k);
+//   const resArr = lastDigits.concat(firstDigits);
+//   return resArr;
+// };
 
-console.log(rotateArr([1, 2, 3, 4, 5], 2));
+// console.log(rotateArr([1, 2, 3, 4, 5], 2));
