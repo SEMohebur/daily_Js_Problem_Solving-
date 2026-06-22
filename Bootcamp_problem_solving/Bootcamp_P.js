@@ -820,3 +820,67 @@
 // };
 
 // console.log(rotateArr([1, 2, 3, 4, 5], 2));
+
+//  Roman to Integer 49=========================================
+// Description: Write a function romanToInt(s) that converts a Roman numeral string to an integer.
+// Example:
+// Input: 'III'   → Output: 3Input: 'IX'    → Output: 9Input: 'LVIII' → Output: 58
+// Hint: Map each symbol to its value; if a smaller value comes before a larger one, subtract it.
+
+// function romanToInt(s) {
+//   const roman = {
+//     I: 1,
+//     V: 5,
+//     X: 10,
+//     L: 50,
+//     C: 100,
+//     D: 500,
+//     M: 1000,
+//   };
+
+//   let result = 0;
+
+//   for (let i = 0; i < s.length; i++) {
+//     const current = roman[s[i]];
+//     const next = roman[s[i + 1]];
+
+//     if (current < next) {
+//       result -= current;
+//     } else {
+//       result += current;
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(romanToInt("III"));
+// console.log(romanToInt("IX"));
+
+// // problem 50
+//Given a string, return the first character that appears only once in the string. If no such character exists, return null.
+
+function firstNonRepeatingChar(str) {
+  const freq = {};
+
+  for (let char of str) {
+    if (!freq[char]) {
+      freq[char] = 1;
+    } else {
+      freq[char]++;
+    }
+  }
+
+  for (let char of str) {
+    if (freq[char] === 1) {
+      return char;
+    }
+  }
+
+  return null;
+}
+
+console.log(firstNonRepeatingChar("leetcode"));
+console.log(firstNonRepeatingChar("loveleetcode"));
+console.log(firstNonRepeatingChar("aabb"));
+console.log(firstNonRepeatingChar("javascript"));
