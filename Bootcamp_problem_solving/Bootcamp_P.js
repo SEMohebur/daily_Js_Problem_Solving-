@@ -858,29 +858,55 @@
 // console.log(romanToInt("IX"));
 
 // // problem 50
-//Given a string, return the first character that appears only once in the string. If no such character exists, return null.
+// //Given a string, return the first character that appears only once in the string. If no such character exists, return null.
 
-function firstNonRepeatingChar(str) {
-  const freq = {};
+// function firstNonRepeatingChar(str) {
+//   const freq = {};
 
-  for (let char of str) {
-    if (!freq[char]) {
-      freq[char] = 1;
-    } else {
-      freq[char]++;
+//   for (let char of str) {
+//     if (!freq[char]) {
+//       freq[char] = 1;
+//     } else {
+//       freq[char]++;
+//     }
+//   }
+
+//   for (let char of str) {
+//     if (freq[char] === 1) {
+//       return char;
+//     }
+//   }
+
+//   return null;
+// }
+
+// console.log(firstNonRepeatingChar("leetcode"));
+
+// //problem 51 ==================================================
+
+
+function longestConsecutive(nums) {
+  const numSet = new Set(nums);
+  let longest = 0;
+
+  for (const num of numSet) {
+    if (!numSet.has(num - 1)) {
+      let currentNum = num;
+      let currentLength = 1;
+
+      while (numSet.has(currentNum + 1)) {
+        currentNum++;
+        currentLength++;
+      }
+
+      longest = Math.max(longest, currentLength);
     }
   }
 
-  for (let char of str) {
-    if (freq[char] === 1) {
-      return char;
-    }
-  }
-
-  return null;
+  return longest;
 }
 
-console.log(firstNonRepeatingChar("leetcode"));
-console.log(firstNonRepeatingChar("loveleetcode"));
-console.log(firstNonRepeatingChar("aabb"));
-console.log(firstNonRepeatingChar("javascript"));
+console.log(longestConsecutive([100, 4, 200, 1, 3, 2])); 
+
+
+console.log(longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]));
