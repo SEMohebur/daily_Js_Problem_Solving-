@@ -909,16 +909,35 @@
 
 // console.log(longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]));
 
-const removeFalsyValues = (arr) => {
-  const result = [];
+// //problem 52 ===============================================
+// //remove falsy values problem
 
+// const removeFalsyValues = (arr) => {
+//   const result = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i]) {
+//       result.push(arr[i]);
+//     }
+//   }
+
+//   return result;
+// };
+
+// console.log(removeFalsyValues([0, 1, false, 2, "", 3, null, "Hello"]));
+
+const groupWordsByLength = (arr) => {
+  const result = {};
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i]) {
-      result.push(arr[i]);
+    const length = arr[i].length;
+    const word = arr[i];
+    if (!result[length]) {
+      result[length] = [word];
+    } else {
+      result[length].push(word);
     }
   }
-
-  return result;
+  console.log(result);
 };
 
-console.log(removeFalsyValues([0, 1, false, 2, "", 3, null, "Hello"]));
+console.log(groupWordsByLength(["cat", "dog", "elephant", "sun", "moon"]));
