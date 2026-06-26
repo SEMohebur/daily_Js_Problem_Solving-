@@ -883,30 +883,42 @@
 // console.log(firstNonRepeatingChar("leetcode"));
 
 // //problem 51 ==================================================
+// //Solve longest consecutive sequence problem
+// function longestConsecutive(nums) {
+//   const numSet = new Set(nums);
+//   let longest = 0;
 
+//   for (const num of numSet) {
+//     if (!numSet.has(num - 1)) {
+//       let currentNum = num;
+//       let currentLength = 1;
 
-function longestConsecutive(nums) {
-  const numSet = new Set(nums);
-  let longest = 0;
+//       while (numSet.has(currentNum + 1)) {
+//         currentNum++;
+//         currentLength++;
+//       }
 
-  for (const num of numSet) {
-    if (!numSet.has(num - 1)) {
-      let currentNum = num;
-      let currentLength = 1;
+//       longest = Math.max(longest, currentLength);
+//     }
+//   }
 
-      while (numSet.has(currentNum + 1)) {
-        currentNum++;
-        currentLength++;
-      }
+//   return longest;
+// }
 
-      longest = Math.max(longest, currentLength);
+// console.log(longestConsecutive([100, 4, 200, 1, 3, 2]));
+
+// console.log(longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]));
+
+const removeFalsyValues = (arr) => {
+  const result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      result.push(arr[i]);
     }
   }
 
-  return longest;
-}
+  return result;
+};
 
-console.log(longestConsecutive([100, 4, 200, 1, 3, 2])); 
-
-
-console.log(longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]));
+console.log(removeFalsyValues([0, 1, false, 2, "", 3, null, "Hello"]));
