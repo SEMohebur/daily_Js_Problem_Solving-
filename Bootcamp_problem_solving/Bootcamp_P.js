@@ -926,18 +926,68 @@
 
 // console.log(removeFalsyValues([0, 1, false, 2, "", 3, null, "Hello"]));
 
-const groupWordsByLength = (arr) => {
-  const result = {};
-  for (let i = 0; i < arr.length; i++) {
-    const length = arr[i].length;
-    const word = arr[i];
-    if (!result[length]) {
-      result[length] = [word];
-    } else {
-      result[length].push(word);
-    }
-  }
-  console.log(result);
-};
+// // //problem 53 ====================================================
+// // //Add group words by length solution
 
-console.log(groupWordsByLength(["cat", "dog", "elephant", "sun", "moon"]));
+// const groupWordsByLength = (arr) => {
+//   const result = {};
+//   for (let i = 0; i < arr.length; i++) {
+//     const length = arr[i].length;
+//     const word = arr[i];
+//     if (!result[length]) {
+//       result[length] = [word];
+//     } else {
+//       result[length].push(word);
+//     }
+//   }
+//   console.log(result);
+// };
+
+// console.log(groupWordsByLength(["cat", "dog", "elephant", "sun", "moon"]));
+
+// problem 54 =========================================================
+// array of object grouping
+// input
+//  [
+//   { name: "Ali", role: "Admin" },
+//   { name: "Sara", role: "User" },
+//   { name: "John", role: "Admin" },
+//   { name: "Maya", role: "User" }
+// ]
+// output
+
+// {
+//   Admin: [
+//     { name: "Ali", role: "Admin" },
+//     { name: "John", role: "Admin" }
+//   ],
+//   User: [
+//     { name: "Sara", role: "User" },
+//     { name: "Maya", role: "User" }
+//   ]
+// }
+
+function groupByRole(arr) {
+  const result = {};
+
+  for (const user of arr) {
+    const role = user.role;
+
+    if (!result[role]) {
+      result[role] = [];
+    }
+
+    result[role].push(user);
+  }
+
+  return result;
+}
+
+console.log(
+  groupByRole([
+    { name: "Ali", role: "Admin" },
+    { name: "Sara", role: "User" },
+    { name: "John", role: "Admin" },
+    { name: "Maya", role: "User" },
+  ]),
+);
