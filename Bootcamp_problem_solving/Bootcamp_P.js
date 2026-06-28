@@ -967,27 +967,54 @@
 //   ]
 // }
 
-function groupByRole(arr) {
+// function groupByRole(arr) {
+//   const result = {};
+
+//   for (const user of arr) {
+//     const role = user.role;
+
+//     if (!result[role]) {
+//       result[role] = [];
+//     }
+
+//     result[role].push(user);
+//   }
+
+//   return result;
+// }
+
+// console.log(
+//   groupByRole([
+//     { name: "Ali", role: "Admin" },
+//     { name: "Sara", role: "User" },
+//     { name: "John", role: "Admin" },
+//     { name: "Maya", role: "User" },
+//   ]),
+// );
+
+// //problem 55 =======================================================
+// grouping product category
+
+const groupingCategory = (param) => {
   const result = {};
 
-  for (const user of arr) {
-    const role = user.role;
-
-    if (!result[role]) {
-      result[role] = [];
+  for (const item of param) {
+    if (!result[item.category]) {
+      result[item.category] = [];
     }
 
-    result[role].push(user);
+    result[item.category].push(item);
   }
 
   return result;
-}
+};
 
 console.log(
-  groupByRole([
-    { name: "Ali", role: "Admin" },
-    { name: "Sara", role: "User" },
-    { name: "John", role: "Admin" },
-    { name: "Maya", role: "User" },
+  groupingCategory([
+    { name: "Laptop", category: "Electronics" },
+    { name: "Phone", category: "Electronics" },
+    { name: "Apple", category: "Food" },
+    { name: "Milk", category: "Food" },
+    { name: "Shirt", category: "Clothing" },
   ]),
 );
