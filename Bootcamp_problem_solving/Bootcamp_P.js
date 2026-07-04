@@ -993,28 +993,44 @@
 // );
 
 // //problem 55 =======================================================
-// grouping product category
+// //grouping product category
 
-const groupingCategory = (param) => {
-  const result = {};
+// const groupingCategory = (param) => {
+//   const result = {};
 
-  for (const item of param) {
-    if (!result[item.category]) {
-      result[item.category] = [];
+//   for (const item of param) {
+//     if (!result[item.category]) {
+//       result[item.category] = [];
+//     }
+
+//     result[item.category].push(item);
+//   }
+
+//   return result;
+// };
+
+// console.log(
+//   groupingCategory([
+//     { name: "Laptop", category: "Electronics" },
+//     { name: "Phone", category: "Electronics" },
+//     { name: "Apple", category: "Food" },
+//     { name: "Milk", category: "Food" },
+//     { name: "Shirt", category: "Clothing" },
+//   ]),
+// );
+
+// problem 56 =======================================================
+// Move All Zeros to the End
+
+const moveZeroToEnd = (param) => {
+  const resArr = [];
+  for (let i = 0; i < param.length; i++) {
+    if (param[i] === 0) {
+      resArr.push(param[i]);
+    } else {
+      resArr.unshift(param[i]);
     }
-
-    result[item.category].push(item);
   }
-
-  return result;
+  return resArr;
 };
-
-console.log(
-  groupingCategory([
-    { name: "Laptop", category: "Electronics" },
-    { name: "Phone", category: "Electronics" },
-    { name: "Apple", category: "Food" },
-    { name: "Milk", category: "Food" },
-    { name: "Shirt", category: "Clothing" },
-  ]),
-);
+console.log(moveZeroToEnd([0, 1, 0, 3, 12]));
