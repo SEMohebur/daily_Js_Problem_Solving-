@@ -1023,14 +1023,15 @@
 // Move All Zeros to the End
 
 const moveZeroToEnd = (param) => {
-  const resArr = [];
+  const zeros = [];
+  const numbers = [];
   for (let i = 0; i < param.length; i++) {
     if (param[i] === 0) {
-      resArr.push(param[i]);
+      zeros.push(param[i]);
     } else {
-      resArr.unshift(param[i]);
+      numbers.push(param[i]);
     }
   }
-  return resArr;
+  return numbers.concat(zeros);
 };
 console.log(moveZeroToEnd([0, 1, 0, 3, 12]));
