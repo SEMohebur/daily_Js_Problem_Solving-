@@ -1036,21 +1036,36 @@
 // };
 // console.log(moveZeroToEnd([0, 1, 0, 3, 12]));
 
-// problem 57 ==============================================
-// Count Data Types
+// //problem 57 ==============================================
+// //Count Data Types
 
-const countDataTypes = (param) => {
-  const resObj = {};
-  for (let i = 0; i < param.length; i++) {
-    console.log();
+// const countDataTypes = (param) => {
+//   const resObj = {};
+//   for (let i = 0; i < param.length; i++) {
+//     console.log();
 
-    if (!resObj[typeof param[i]]) {
-      resObj[typeof param[i]] = 1;
-    } else {
-      resObj[typeof param[i]] = resObj[typeof param[i]] + 1;
-    }
-  }
-  return resObj;
+//     if (!resObj[typeof param[i]]) {
+//       resObj[typeof param[i]] = 1;
+//     } else {
+//       resObj[typeof param[i]] = resObj[typeof param[i]] + 1;
+//     }
+//   }
+//   return resObj;
+// };
+
+// console.log(countDataTypes([1, "hello", true, 5, "world", false, 10]));
+
+// //problem 58=====================================================
+// // Sort Objects by Age
+
+const objsortingAge = (arr) => {
+  const res = arr.sort((a, b) => a.age - b.age);
+  return res;
 };
-
-console.log(countDataTypes([1, "hello", true, 5, "world", false, 10]));
+console.log(
+  objsortingAge([
+    { name: "Ali", age: 25 },
+    { name: "Sara", age: 20 },
+    { name: "John", age: 30 },
+  ]),
+);
