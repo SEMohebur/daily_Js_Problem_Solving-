@@ -1022,16 +1022,35 @@
 // problem 56 =======================================================
 // Move All Zeros to the End
 
-const moveZeroToEnd = (param) => {
-  const zeros = [];
-  const numbers = [];
+// const moveZeroToEnd = (param) => {
+//   const zeros = [];
+//   const numbers = [];
+//   for (let i = 0; i < param.length; i++) {
+//     if (param[i] === 0) {
+//       zeros.push(param[i]);
+//     } else {
+//       numbers.push(param[i]);
+//     }
+//   }
+//   return numbers.concat(zeros);
+// };
+// console.log(moveZeroToEnd([0, 1, 0, 3, 12]));
+
+// problem 57 ==============================================
+// Count Data Types
+
+const countDataTypes = (param) => {
+  const resObj = {};
   for (let i = 0; i < param.length; i++) {
-    if (param[i] === 0) {
-      zeros.push(param[i]);
+    console.log();
+
+    if (!resObj[typeof param[i]]) {
+      resObj[typeof param[i]] = 1;
     } else {
-      numbers.push(param[i]);
+      resObj[typeof param[i]] = resObj[typeof param[i]] + 1;
     }
   }
-  return numbers.concat(zeros);
+  return resObj;
 };
-console.log(moveZeroToEnd([0, 1, 0, 3, 12]));
+
+console.log(countDataTypes([1, "hello", true, 5, "world", false, 10]));
