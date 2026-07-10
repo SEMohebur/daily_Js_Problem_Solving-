@@ -1058,14 +1058,34 @@
 // //problem 58=====================================================
 // // Sort Objects by Age
 
-const objsortingAge = (arr) => {
-  const res = arr.sort((a, b) => a.age - b.age);
-  return res;
+// const objsortingAge = (arr) => {
+//   const res = arr.sort((a, b) => a.age - b.age);
+//   return res;
+// };
+// console.log(
+//   objsortingAge([
+//     { name: "Ali", age: 25 },
+//     { name: "Sara", age: 20 },
+//     { name: "John", age: 30 },
+//   ]),
+// );
+
+// Problem 64 ========================================
+// Rotate String
+
+const rotateString = (str, num) => {
+  const rominingChr = [];
+  const conditionChr = [];
+  for (let i = 0; i < str.length; i++) {
+    if (i < str.length - num) {
+      rominingChr.push(str[i]);
+    } else {
+      conditionChr.push(str[i]);
+    }
+  }
+  const margeStr = conditionChr.concat(rominingChr);
+  const result = margeStr.join("");
+  console.log(result);
 };
-console.log(
-  objsortingAge([
-    { name: "Ali", age: 25 },
-    { name: "Sara", age: 20 },
-    { name: "John", age: 30 },
-  ]),
-);
+
+rotateString("javascript", 2);
