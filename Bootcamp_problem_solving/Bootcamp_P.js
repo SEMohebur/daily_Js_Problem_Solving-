@@ -1093,13 +1093,31 @@
 // //Problem 60 ========================================
 // //Remove Element
 
-const removeElement = (arr, removeNum) => {
-  const mainArr = [];
+// const removeElement = (arr, removeNum) => {
+//   const mainArr = [];
+//   for (item of arr) {
+//     if (item !== removeNum) {
+//       mainArr.push(item);
+//     }
+//   }
+//   return mainArr;
+// };
+// console.log(removeElement([3, 2, 2, 3], 3));
+
+// //Problem 61 ========================================
+// //Move Negative Numbers Left
+
+function moveNegativeNumbersLeft(arr) {
+  const positiveNum = [];
+  const negetiveNum = [];
   for (item of arr) {
-    if (item !== removeNum) {
-      mainArr.push(item);
+    if (item < 0) {
+      negetiveNum.push(item);
+    } else {
+      positiveNum.push(item);
     }
   }
-  return mainArr;
-};
-console.log(removeElement([3, 2, 2, 3], 3));
+  return negetiveNum.concat(positiveNum);
+}
+
+console.log(moveNegativeNumbersLeft([-1, 5, -4, 3, -2]));
