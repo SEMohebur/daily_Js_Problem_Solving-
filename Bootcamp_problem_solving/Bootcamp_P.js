@@ -1070,22 +1070,36 @@
 //   ]),
 // );
 
-// Problem 64 ========================================
-// Rotate String
+// //Problem 59 ========================================
+// //Rotate String
 
-const rotateString = (str, num) => {
-  const rominingChr = [];
-  const conditionChr = [];
-  for (let i = 0; i < str.length; i++) {
-    if (i < str.length - num) {
-      rominingChr.push(str[i]);
-    } else {
-      conditionChr.push(str[i]);
+// const rotateString = (str, num) => {
+//   const rominingChr = [];
+//   const conditionChr = [];
+//   for (let i = 0; i < str.length; i++) {
+//     if (i < str.length - num) {
+//       rominingChr.push(str[i]);
+//     } else {
+//       conditionChr.push(str[i]);
+//     }
+//   }
+//   const margeStr = conditionChr.concat(rominingChr);
+//   const result = margeStr.join("");
+//   return result;
+// };
+
+// console.log(rotateString("javascript", 2));
+
+// //Problem 60 ========================================
+// //Remove Element
+
+const removeElement = (arr, removeNum) => {
+  const mainArr = [];
+  for (item of arr) {
+    if (item !== removeNum) {
+      mainArr.push(item);
     }
   }
-  const margeStr = conditionChr.concat(rominingChr);
-  const result = margeStr.join("");
-  console.log(result);
+  return mainArr;
 };
-
-rotateString("javascript", 2);
+console.log(removeElement([3, 2, 2, 3], 3));
