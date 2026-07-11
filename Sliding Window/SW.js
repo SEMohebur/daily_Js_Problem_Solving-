@@ -1,2 +1,2 @@
-// Sliding Window pattenr sikhbo
-// console.log("SW");
+// //Sliding Window pattenr sikhbo
+// //console.log("SW");

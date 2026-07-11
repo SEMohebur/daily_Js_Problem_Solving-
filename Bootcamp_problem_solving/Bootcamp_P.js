@@ -1107,17 +1107,19 @@
 // //Problem 61 ========================================
 // //Move Negative Numbers Left
 
-function moveNegativeNumbersLeft(arr) {
-  const positiveNum = [];
-  const negetiveNum = [];
-  for (item of arr) {
-    if (item < 0) {
-      negetiveNum.push(item);
-    } else {
-      positiveNum.push(item);
-    }
-  }
-  return negetiveNum.concat(positiveNum);
-}
+// function moveNegativeNumbersLeft(arr) {
+//   const positiveNum = [];
+//   const negetiveNum = [];
+//   for (item of arr) {
+//     if (item < 0) {
+//       negetiveNum.push(item);
+//     } else {
+//       positiveNum.push(item);
+//     }
+//   }
+//   return negetiveNum.concat(positiveNum);
+// }
 
-console.log(moveNegativeNumbersLeft([-1, 5, -4, 3, -2]));
+// console.log(moveNegativeNumbersLeft([-1, 5, -4, 3, -2]));
+
+
