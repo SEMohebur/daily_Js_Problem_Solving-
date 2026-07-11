@@ -29,19 +29,15 @@ const isPalindrome = (str) => {
   let right = arr.length - 1;
 
   while (left < right) {
-    let temp = arr[right];
-    arr[right] = arr[left];
-    arr[left] = temp;
+    if (arr[left] !== arr[right]) {
+      return false;
+    } else {
+      return true;
+    }
 
     left++;
     right--;
   }
-  let res = arr.join("");
-  if (res === str) {
-    return true;
-  } else {
-    return false;
-  }
 };
 
-console.log(isPalindrome("101"));
+console.log(isPalindrome("111"));
