@@ -23,21 +23,41 @@
 // //problem 2 ====================================
 // // pelindrome
 
-const isPalindrome = (str) => {
-  const arr = str.split("");
+// const isPalindrome = (str) => {
+//   const arr = str.toLowerCase().split("");
+//   let left = 0;
+//   let right = arr.length - 1;
+
+//   while (left < right) {
+//     if (arr[left] !== arr[right]) {
+//       return false;
+//     } else {
+//       return true;
+//     }
+
+//     left++;
+//     right--;
+//   }
+// };
+
+// console.log(isPalindrome("A man a plan a canal Panama"));
+
+// // problem 3 =========================================
+// //Reverse Array (In-place)
+
+const reverseArrInPlace = (arr) => {
   let left = 0;
   let right = arr.length - 1;
 
   while (left < right) {
-    if (arr[left] !== arr[right]) {
-      return false;
-    } else {
-      return true;
-    }
+    let temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
 
     left++;
     right--;
   }
+  return arr;
 };
 
-console.log(isPalindrome("111"));
+console.log(reverseArrInPlace([1, 2, 3, 4, 5]));
