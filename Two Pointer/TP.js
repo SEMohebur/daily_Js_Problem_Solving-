@@ -66,16 +66,44 @@
 
 // //Move Negative Numbers Left
 
-const moveNegativeNumLeft = (arr) => {
+// const moveNegativeNumLeft = (arr) => {
+//   let left = 0;
+//   let right = arr.length - 1;
+
+//   while (left < right) {
+//     while (left < right && arr[left] < 0) {
+//       left++;
+//     }
+//     while (left < right && arr[right] >= 0) {
+//       right--;
+//     }
+//     if (left < right) {
+//       let temp = arr[left];
+//       arr[left] = arr[right];
+//       arr[right] = temp;
+
+//       left++;
+//       right--;
+//     }
+//   }
+
+//   return arr;
+// };
+
+// console.log(moveNegativeNumLeft([4, -1, 2, -8, 5, -3]));
+
+// problem 5===============================
+
+const moveOddLeft = (arr) => {
   let left = 0;
   let right = arr.length - 1;
 
   while (left < right) {
-    while (left < right && arr[left] < 0) {
+    while (left < right && arr[left] % 2 !== 0) {
       left++;
     }
 
-    while (left < right && arr[right] >= 0) {
+    while (left < right && arr[right] % 2 === 0) {
       right--;
     }
 
@@ -92,4 +120,4 @@ const moveNegativeNumLeft = (arr) => {
   return arr;
 };
 
-console.log(moveNegativeNumLeft([4, -1, 2, -8, 5, -3]));
+console.log(moveOddLeft([2, 5, 8, 1, 6, 3]));
