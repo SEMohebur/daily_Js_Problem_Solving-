@@ -45,19 +45,51 @@
 // // problem 3 =========================================
 // //Reverse Array (In-place)
 
-const reverseArrInPlace = (arr) => {
+// const reverseArrInPlace = (arr) => {
+//   let left = 0;
+//   let right = arr.length - 1;
+
+//   while (left < right) {
+//     let temp = arr[left];
+//     arr[left] = arr[right];
+//     arr[right] = temp;
+
+//     left++;
+//     right--;
+//   }
+//   return arr;
+// };
+
+// console.log(reverseArrInPlace([1, 2, 3, 4, 5]));
+
+// // problem 4 =========================================
+
+// //Move Negative Numbers Left
+
+const moveNegativeNumLeft = (arr) => {
   let left = 0;
   let right = arr.length - 1;
 
   while (left < right) {
-    let temp = arr[left];
-    arr[left] = arr[right];
-    arr[right] = temp;
+    while (left < right && arr[left] < 0) {
+      left++;
+    }
 
-    left++;
-    right--;
+    while (left < right && arr[right] >= 0) {
+      right--;
+    }
+
+    if (left < right) {
+      let temp = arr[left];
+      arr[left] = arr[right];
+      arr[right] = temp;
+
+      left++;
+      right--;
+    }
   }
+
   return arr;
 };
 
-console.log(reverseArrInPlace([1, 2, 3, 4, 5]));
+console.log(moveNegativeNumLeft([4, -1, 2, -8, 5, -3]));
