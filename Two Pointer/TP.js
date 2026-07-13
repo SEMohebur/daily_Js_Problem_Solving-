@@ -94,30 +94,52 @@
 
 // problem 5===============================
 
-const moveOddLeft = (arr) => {
+// const moveOddLeft = (arr) => {
+//   let left = 0;
+//   let right = arr.length - 1;
+
+//   while (left < right) {
+//     while (left < right && arr[left] % 2 !== 0) {
+//       left++;
+//     }
+
+//     while (left < right && arr[right] % 2 === 0) {
+//       right--;
+//     }
+
+//     if (left < right) {
+//       let temp = arr[left];
+//       arr[left] = arr[right];
+//       arr[right] = temp;
+
+//       left++;
+//       right--;
+//     }
+//   }
+
+//   return arr;
+// };
+
+// console.log(moveOddLeft([2, 5, 8, 1, 6, 3]));
+
+// problem 6 ============================================
+// Move Even Numbers Left
+
+const moveEvenNumLeft = (arr) => {
   let left = 0;
   let right = arr.length - 1;
 
   while (left < right) {
-    while (left < right && arr[left] % 2 !== 0) {
-      left++;
+    if (arr[left] % 2 !== 0) {
+      let temp = arr[right];
+      arr[right] = arr[left];
+      arr[left] = temp;
     }
 
-    while (left < right && arr[right] % 2 === 0) {
-      right--;
-    }
-
-    if (left < right) {
-      let temp = arr[left];
-      arr[left] = arr[right];
-      arr[right] = temp;
-
-      left++;
-      right--;
-    }
+    left++;
+    right--;
   }
-
   return arr;
 };
 
-console.log(moveOddLeft([2, 5, 8, 1, 6, 3]));
+console.log(moveEvenNumLeft([1, 4, 3, 2, 7, 6]));
