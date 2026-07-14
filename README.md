@@ -1,4 +1,4 @@
-# 🚀 Daily JavaScript Problem Solving
+#  🚀 Daily JavaScript Problem Solving
 
 This repository documents my daily JavaScript problem-solving journey.
 
