@@ -144,7 +144,22 @@
 
 // console.log(moveEvenNumLeft([2, 4, 1, 3, 6]));
 
-// problem 7 ============================================
+// //problem 7 ============================================
+// //Count Odd Numbers
+
+const countOddNum = (arr) => {
+  let counter = 0;
+  for (item of arr) {
+    if (item % 2 !== 0) {
+      counter++;
+    }
+  }
+  console.log(counter);
+};
+
+countOddNum([2, 5, 8, 1, 6, 3]);
+
+// problem 8 ============================================
 
 // // Remove Duplicates from Sorted Array
 
