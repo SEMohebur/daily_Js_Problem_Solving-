@@ -1122,4 +1122,21 @@
 
 // console.log(moveNegativeNumbersLeft([-1, 5, -4, 3, -2]));
 
+// // problem 62=============================================
+// count word
 
+const countWords = (str) => {
+  const obj = {};
+  const arr = str.toLowerCase().split(" ");
+
+  for (item of arr) {
+    if (!obj[item]) {
+      obj[item] = 1;
+    } else {
+      obj[item] = obj[item] + 1;
+    }
+  }
+  return obj;
+};
+
+console.log(countWords("The quick brown fox jumps over the lazy dog"));

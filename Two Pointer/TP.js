@@ -147,35 +147,35 @@
 // //problem 7 ============================================
 // //Count Odd Numbers
 
-const countOddNum = (arr) => {
-  let counter = 0;
-  for (item of arr) {
-    if (item % 2 !== 0) {
-      counter++;
-    }
-  }
-  console.log(counter);
-};
+// const countOddNum = (arr) => {
+//   let counter = 0;
+//   for (item of arr) {
+//     if (item % 2 !== 0) {
+//       counter++;
+//     }
+//   }
+//   console.log(counter);
+// };
 
-countOddNum([2, 5, 8, 1, 6, 3]);
+// countOddNum([2, 5, 8, 1, 6, 3]);
 
 // problem 8 ============================================
 
 // // Remove Duplicates from Sorted Array
 
-const removeDuplicateNum = (arr) => {
-  if (arr.length === 0) return [];
+// const removeDuplicateNum = (arr) => {
+//   if (arr.length === 0) return [];
 
-  let i = 0;
+//   let i = 0;
 
-  for (let j = 1; j < arr.length; j++) {
-    if (arr[i] !== arr[j]) {
-      i++;
-      arr[i] = arr[j];
-    }
-  }
+//   for (let j = 1; j < arr.length; j++) {
+//     if (arr[i] !== arr[j]) {
+//       i++;
+//       arr[i] = arr[j];
+//     }
+//   }
 
-  return arr.slice(0, i + 1);
-};
+//   return arr.slice(0, i + 1);
+// };
 
-console.log(removeDuplicateNum([1, 1, 2, 2, 3, 4, 4]));
+// console.log(removeDuplicateNum([1, 1, 2, 2, 3, 4, 4]));
