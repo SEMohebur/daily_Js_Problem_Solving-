@@ -1159,6 +1159,7 @@ const findfirstNonRepChar = (str) => {
       return char;
     }
   }
+  return "not found";
 };
 
-console.log(findfirstNonRepChar("aabwbdd"));
+console.log(findfirstNonRepChar("aabbddwffwcddv"));
