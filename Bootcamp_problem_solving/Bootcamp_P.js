@@ -1125,18 +1125,40 @@
 // // problem 62=============================================
 // count word
 
-const countWords = (str) => {
-  const obj = {};
-  const arr = str.toLowerCase().split(" ");
+// const countWords = (str) => {
+//   const obj = {};
+//   const arr = str.toLowerCase().split(" ");
 
-  for (item of arr) {
-    if (!obj[item]) {
-      obj[item] = 1;
+//   for (const item of arr) {
+//     if (!obj[item]) {
+//       obj[item] = 1;
+//     } else {
+//       obj[item] = obj[item] + 1;
+//     }
+//   }
+//   return obj;
+// };
+
+// console.log(countWords("The quick brown fox jumps over the lazy dog"));
+
+// // problem 63==================================================
+// Find First Non-Repeating Character
+
+const findfirstNonRepChar = (str) => {
+  const obj = {};
+  for (const char of str) {
+    if (!obj[char]) {
+      obj[char] = 1;
     } else {
-      obj[item] = obj[item] + 1;
+      obj[char] = obj[char] + 1;
     }
   }
-  return obj;
+
+  for (const char in obj) {
+    if (obj[char] === 1) {
+      return char;
+    }
+  }
 };
 
-console.log(countWords("The quick brown fox jumps over the lazy dog"));
+console.log(findfirstNonRepChar("aabwbdd"));
